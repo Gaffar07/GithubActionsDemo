@@ -1,0 +1,50 @@
+# =============================
+# Set BrowserStack Credentials
+# =============================
+userName: gaffar_mbBXWM
+accessKey: BSK81M5auB99VarhQE5B
+
+# ======================
+# BrowserStack Reporting
+# ======================
+projectName: API Automation Suite
+buildName: API Build - August 2025
+buildIdentifier: '${DATE_TIME}'
+source: cucumber-js:main:v1.0
+
+# =======================================
+# Platforms (Browsers / Devices to test)
+# =======================================
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Chrome
+    browserVersion: latest
+  - os: OS X
+    osVersion: Monterey
+    browserName: Safari
+    browserVersion: latest
+  - deviceName: iPhone 13
+    osVersion: 15
+    browserName: Safari
+  - deviceName: Samsung Galaxy S22 Ultra
+    osVersion: 12.0
+    browserName: chrome
+
+# =======================
+# Parallels per Platform
+# =======================
+parallelsPerPlatform: 2
+
+# =======================
+# Local Testing Support
+# =======================
+browserstackLocal: true
+
+# =======================
+# Test Observability
+# =======================
+debug: true
+networkLogs: true
+consoleLogs: info
+video: true

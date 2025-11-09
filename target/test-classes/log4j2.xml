@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+	<Appenders>
+		<!-- <Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console> -->
+		<Console name="ConsoleStdOut" target="SYSTEM_OUT">
+			<ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="ACCEPT" />
+			<PatternLayout pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<Console name="ConsoleStdErr" target="SYSTEM_ERR">
+			<ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY" />
+			<PatternLayout pattern="%d{HH:mm:ss}  [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="fileLogger" fileName="${basePath}/Logs.log" filePattern="${basePath}/Logs-%d{yyyy_MM_dd_HHmm}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="500KB" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<appender-ref ref="fileLogger" />
+			<AppenderRef ref="ConsoleStdOut" />
+			<AppenderRef ref="ConsoleStdErr" />
+
+		</Root>
+	</Loggers>
+</Configuration>

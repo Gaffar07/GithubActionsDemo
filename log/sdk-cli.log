@@ -1,0 +1,2420 @@
+2025-08-22T13:55:20.360Z CLI info [main]     Server listening on port: 5400
+2025-08-22T13:55:20.882Z CLI info     Config : {"userName":"gaffar_mbBXWM","accessKey":"BSK81M5auB99VarhQE5B","projectName":"API Automation Suite","buildName":"API Build - August 2025","buildIdentifier":"${DATE_TIME}","source":"cucumber-js:main:v1.0","platforms":[{"os":"Windows","osVersion":11,"browserName":"Chrome","browserVersion":"latest"},{"os":"OS X","osVersion":"Monterey","browserName":"Safari","browserVersion":"latest"},{"deviceName":"iPhone 13","osVersion":15,"browserName":"Safari"},{"deviceName":"Samsung Galaxy S22 Ultra","osVersion":12,"browserName":"chrome"}],"parallelsPerPlatform":2,"browserstackLocal":true,"debug":true,"networkLogs":true,"consoleLogs":"info","video":true}
+2025-08-22T13:55:20.935Z CLI info [testhub:module]  [gaffar_mbBXWM]   [525e934a-ef2c-4014-93ef-b84c542484e4]  Starting testhub from 25788:0
+2025-08-22T13:55:20.936Z CLI info [testhub:module]  [gaffar_mbBXWM]   [525e934a-ef2c-4014-93ef-b84c542484e4]  startBuild: payload=
+
+{"started_at":"2025-08-22T13:55:20.936Z","host_info":{"hostname":"LAPTOP-0ETEA5TC","platform":"win32","type":"Windows_NT","version":"Windows 10 Home Single Language","arch":"x64"},"ci_info":{"build_number":null},"version_control":{"name":"git","sha":"20d80641c8446677190f09bcb3975905ec1ad73c","short_sha":"20d80641c8","branch":"master","tag":null,"committer":"gaffar <gaffarshaikh07@gmail.com>","committer_date":"2025-08-22T09:57:00.000Z","author":"gaffar <gaffarshaikh07@gmail.com>","author_date":"2025-08-22T09:57:00.000Z","commit_message":"initial","root":"D:\\Gaffar\\API","common_git_dir":"D:\\Gaffar\\API\\.git","worktree_git_dir":"D:\\Gaffar\\API\\.git","last_tag":null,"commits_since_last_tag":0,"remotes":[{"name":"origin","url":"https://github.com/Gaffar07/API.git"}]},"project_name":"API Automation Suite","name":"API Build - August 2025","build_identifier":"22-Aug-19:25","build_run_identifier":null,"description":"","tags":[],"failed_tests_rerun":false,"accessibility":{"settings":{}},"framework_details":{"frameworkName":"TestNG","frameworkVersion":"7.0.0","sdkVersion":"1.39.0","cliVersion":"1.6.11","language":"java","testFramework":{"name":"selenium","version":"3.141.59"},"source":"cucumber-js:main:v1.0"},"product_map":{"observability":true,"accessibility":null,"percy":false,"automate":true,"app_automate":false},"browserstackAutomation":true,"test_orchestration":{}}
+2025-08-22T13:55:20.936Z CLI info  [gaffar_mbBXWM]   [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2025-08-22T13:55:21.859Z CLI info [testhub:module]  [gaffar_mbBXWM]   [525e934a-ef2c-4014-93ef-b84c542484e4]  startBuild: response=setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w
+2025-08-22T13:55:21.861Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2025-08-22T13:55:29.407Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2025-08-22T13:55:29.490Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2025-08-22T13:55:29.538Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2025-08-22T13:55:30.105Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making GET request to https://hub-apse.browserstack.com
+2025-08-22T13:55:32.443Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '75d7eeff-5914-453e-a105-f88708e6d319',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.421Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:32.444Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '64c3f47a-65b7-413a-95e6-32a66e545e32',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.418Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:32.446Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'fd8091fb-a3a3-4f5c-9464-be551d016009',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.408Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:32.448Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'c9e97f4f-ce42-4aba-9ca2-d914169c6005',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.405Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:32.452Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '75d7eeff-5914-453e-a105-f88708e6d319',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.421Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '64c3f47a-65b7-413a-95e6-32a66e545e32',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.418Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'fd8091fb-a3a3-4f5c-9464-be551d016009',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.408Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'c9e97f4f-ce42-4aba-9ca2-d914169c6005',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.405Z'
+    },
+    logs: []
+  }
+] to 25788:0
+2025-08-22T13:55:32.454Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:55:33.167Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'c9e97f4f-ce42-4aba-9ca2-d914169c6005',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.405Z',
+    finished_at: '2025-08-22T13:55:33.153Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.174Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'fd8091fb-a3a3-4f5c-9464-be551d016009',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.408Z',
+    finished_at: '2025-08-22T13:55:33.159Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.197Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '75d7eeff-5914-453e-a105-f88708e6d319',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.421Z',
+    finished_at: '2025-08-22T13:55:33.184Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.200Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '64c3f47a-65b7-413a-95e6-32a66e545e32',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:32.418Z',
+    finished_at: '2025-08-22T13:55:33.188Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.366Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:55:33.311Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-3' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.367Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '222737bc-de42-4dec-8048-ed7b4224f868',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:55:33.299Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-1' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.369Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:55:33.320Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-2' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:33.371Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:55:33.320Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-0' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:34.457Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'c9e97f4f-ce42-4aba-9ca2-d914169c6005',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.405Z',
+      finished_at: '2025-08-22T13:55:33.153Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'fd8091fb-a3a3-4f5c-9464-be551d016009',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.408Z',
+      finished_at: '2025-08-22T13:55:33.159Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '75d7eeff-5914-453e-a105-f88708e6d319',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.421Z',
+      finished_at: '2025-08-22T13:55:33.184Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '64c3f47a-65b7-413a-95e6-32a66e545e32',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:32.418Z',
+      finished_at: '2025-08-22T13:55:33.188Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:55:33.311Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '222737bc-de42-4dec-8048-ed7b4224f868',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:55:33.299Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:55:33.320Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:55:33.320Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 25788:0
+2025-08-22T13:55:34.465Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:55:34.671Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":"UnhandledError","test_rerun_name":"Default test-2","test_result_at":"2025-08-22T19:25:34.657411700","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:25:33.320410800","platform_index":0,"test_failure":[{"backtrace":["java.lang.NullPointerException: null value in entry: desiredCapabilities=null\r","\tat com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)\r","\tat com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)\r","\tat com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)\r","\tat com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)\r","\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)\r","\tat org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)\r","\tat org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)\r","\tat utils.DriverFactory.initializeWebDriver(DriverFactory.java:70)\r","\tat Hooks.Hooks.setup(Hooks.java:69)\r"]}],"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-2@2","test_uuid":"9661cb45-8d27-4c4a-a01c-d295a656adc2","test_ended_at":"2025-08-22T19:25:34.661411900","automate_session_name":"Default test-22","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:128e16b9","custom_metadata":{},"test_failure_reason":"java.lang.NullPointerException: null value in entry: desiredCapabilities=null","test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"failed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:25:32.405354800","hook_id":"c9e97f4f-ce42-4aba-9ca2-d914169c6005","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:25:33.153409500","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"c9e97f4f-ce42-4aba-9ca2-d914169c6005","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T13:55:34.673Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'failed',
+    duration_in_ms: 1341,
+    started_at: '2025-08-22T13:55:33.320Z',
+    finished_at: '2025-08-22T13:55:34.661Z',
+    failure: [ [Object] ],
+    failure_type: 'UnhandledError',
+    failure_reason: 'java.lang.NullPointerException: null value in entry: desiredCapabilities=null',
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-2' },
+    hooks: [ 'c9e97f4f-ce42-4aba-9ca2-d914169c6005' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:34.739Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'b3bbf94d-e58a-423e-9daa-4d5918ac1eb0',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:34.734Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:35.193Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'b3bbf94d-e58a-423e-9daa-4d5918ac1eb0',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:55:34.734Z',
+    finished_at: '2025-08-22T13:55:35.186Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:55:36.461Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'failed',
+      duration_in_ms: 1341,
+      started_at: '2025-08-22T13:55:33.320Z',
+      finished_at: '2025-08-22T13:55:34.661Z',
+      failure: [Array],
+      failure_type: 'UnhandledError',
+      failure_reason: 'java.lang.NullPointerException: null value in entry: desiredCapabilities=null',
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'b3bbf94d-e58a-423e-9daa-4d5918ac1eb0',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:34.734Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'b3bbf94d-e58a-423e-9daa-4d5918ac1eb0',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: '9661cb45-8d27-4c4a-a01c-d295a656adc2',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:55:34.734Z',
+      finished_at: '2025-08-22T13:55:35.186Z'
+    },
+    logs: []
+  }
+] to 25788:0
+2025-08-22T13:55:36.462Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:55:51.112Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:55:51.098Z',
+      uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e'
+    }
+  ]
+} to 25788:0
+2025-08-22T13:55:52.533Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 25788:0
+2025-08-22T13:55:52.533Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:55:53.877Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:55:53.874Z',
+      uuid: '222737bc-de42-4dec-8048-ed7b4224f868',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: '222737bc-de42-4dec-8048-ed7b4224f868'
+    }
+  ]
+} to 25788:0
+2025-08-22T13:55:54.535Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 25788:0
+2025-08-22T13:55:54.535Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:56:00.707Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":null,"test_rerun_name":"Default test-0","test_result_at":"2025-08-22T19:25:58.428881800","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:25:33.320410800","platform_index":0,"test_failure":null,"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-0@0","test_uuid":"7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e","test_ended_at":"2025-08-22T19:25:58.428881800","automate_session_name":"Default test-00","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:3e5c3b07","custom_metadata":{},"test_failure_reason":null,"test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"passed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:25:32.418351800","hook_id":"64c3f47a-65b7-413a-95e6-32a66e545e32","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:25:33.188414300","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"64c3f47a-65b7-413a-95e6-32a66e545e32","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T13:56:00.708Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'passed',
+    duration_in_ms: 25108,
+    started_at: '2025-08-22T13:55:33.320Z',
+    finished_at: '2025-08-22T13:55:58.428Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-0' },
+    hooks: [ '64c3f47a-65b7-413a-95e6-32a66e545e32' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:00.748Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '1866341f-8c93-46dd-8d2b-852c7eee20cf',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:56:00.744Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:00.810Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '1866341f-8c93-46dd-8d2b-852c7eee20cf',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:56:00.744Z',
+    finished_at: '2025-08-22T13:56:00.806Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:02.211Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":null,"test_rerun_name":"Default test-1","test_result_at":"2025-08-22T19:26:00.187134200","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:25:33.299413500","platform_index":0,"test_failure":null,"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-1@1","test_uuid":"222737bc-de42-4dec-8048-ed7b4224f868","test_ended_at":"2025-08-22T19:26:00.187134200","automate_session_name":"Default test-11","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:5505ea16","custom_metadata":{},"test_failure_reason":null,"test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"passed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:25:32.421349400","hook_id":"75d7eeff-5914-453e-a105-f88708e6d319","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:25:33.184411500","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"75d7eeff-5914-453e-a105-f88708e6d319","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T13:56:02.212Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '222737bc-de42-4dec-8048-ed7b4224f868',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'passed',
+    duration_in_ms: 26888,
+    started_at: '2025-08-22T13:55:33.299Z',
+    finished_at: '2025-08-22T13:56:00.187Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-1' },
+    hooks: [ '75d7eeff-5914-453e-a105-f88708e6d319' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:02.251Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '1bcc50b1-636e-457f-b77c-4eda0d97361c',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:56:02.246Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:02.302Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '1bcc50b1-636e-457f-b77c-4eda0d97361c',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:56:02.246Z',
+    finished_at: '2025-08-22T13:56:02.298Z'
+  },
+  logs: []
+} to 25788:0
+2025-08-22T13:56:02.560Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'passed',
+      duration_in_ms: 25108,
+      started_at: '2025-08-22T13:55:33.320Z',
+      finished_at: '2025-08-22T13:55:58.428Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '1866341f-8c93-46dd-8d2b-852c7eee20cf',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:56:00.744Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '1866341f-8c93-46dd-8d2b-852c7eee20cf',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: '7fe4d085-7bbf-4f9d-8ac5-d9f24a06458e',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:56:00.744Z',
+      finished_at: '2025-08-22T13:56:00.806Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '222737bc-de42-4dec-8048-ed7b4224f868',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'passed',
+      duration_in_ms: 26888,
+      started_at: '2025-08-22T13:55:33.299Z',
+      finished_at: '2025-08-22T13:56:00.187Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '1bcc50b1-636e-457f-b77c-4eda0d97361c',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:56:02.246Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '1bcc50b1-636e-457f-b77c-4eda0d97361c',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: '222737bc-de42-4dec-8048-ed7b4224f868',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:56:02.246Z',
+      finished_at: '2025-08-22T13:56:02.298Z'
+    },
+    logs: []
+  }
+] to 25788:0
+2025-08-22T13:56:02.561Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:56:15.401Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:56:15.399Z',
+      uuid: '033eb322-e25d-49fd-88d0-9b9b749db0ce',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: '033eb322-e25d-49fd-88d0-9b9b749db0ce'
+    }
+  ]
+} to 25788:0
+2025-08-22T13:56:16.591Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 25788:0
+2025-08-22T13:56:16.592Z CLI info  [gaffar_mbBXWM]  [setxlsiffgkzqilwr9tokzr2wyspbozs3gyymw6w]  [525e934a-ef2c-4014-93ef-b84c542484e4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:59:18.604Z CLI info [main]     Server listening on port: 5400
+2025-08-22T13:59:19.169Z CLI info     Config : {"userName":"gaffar_mbBXWM","accessKey":"BSK81M5auB99VarhQE5B","projectName":"API Automation Suite","buildName":"API Build - August 2025","buildIdentifier":"${DATE_TIME}","source":"cucumber-js:main:v1.0","platforms":[{"os":"Windows","osVersion":11,"browserName":"Chrome","browserVersion":"latest"},{"os":"OS X","osVersion":"Monterey","browserName":"Safari","browserVersion":"latest"},{"deviceName":"iPhone 13","osVersion":15,"browserName":"Safari"},{"deviceName":"Samsung Galaxy S22 Ultra","osVersion":12,"browserName":"chrome"}],"parallelsPerPlatform":2,"browserstackLocal":true,"debug":true,"networkLogs":true,"consoleLogs":"info","video":true}
+2025-08-22T13:59:19.186Z CLI info [testhub:module]  [gaffar_mbBXWM]   [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Starting testhub from 28192:0
+2025-08-22T13:59:19.187Z CLI info [testhub:module]  [gaffar_mbBXWM]   [b9f7099f-92eb-485d-afce-3f9da3b829b4]  startBuild: payload=
+
+{"started_at":"2025-08-22T13:59:19.187Z","host_info":{"hostname":"LAPTOP-0ETEA5TC","platform":"win32","type":"Windows_NT","version":"Windows 10 Home Single Language","arch":"x64"},"ci_info":{"build_number":null},"version_control":{"name":"git","sha":"20d80641c8446677190f09bcb3975905ec1ad73c","short_sha":"20d80641c8","branch":"master","tag":null,"committer":"gaffar <gaffarshaikh07@gmail.com>","committer_date":"2025-08-22T09:57:00.000Z","author":"gaffar <gaffarshaikh07@gmail.com>","author_date":"2025-08-22T09:57:00.000Z","commit_message":"initial","root":"D:\\Gaffar\\API","common_git_dir":"D:\\Gaffar\\API\\.git","worktree_git_dir":"D:\\Gaffar\\API\\.git","last_tag":null,"commits_since_last_tag":0,"remotes":[{"name":"origin","url":"https://github.com/Gaffar07/API.git"}]},"project_name":"API Automation Suite","name":"API Build - August 2025","build_identifier":"22-Aug-19:29","build_run_identifier":null,"description":"","tags":[],"failed_tests_rerun":false,"accessibility":{"settings":{}},"framework_details":{"frameworkName":"TestNG","frameworkVersion":"7.0.0","sdkVersion":"1.39.0","cliVersion":"1.6.11","language":"java","testFramework":{"name":"selenium","version":"3.141.59"},"source":"cucumber-js:main:v1.0"},"product_map":{"observability":true,"accessibility":null,"percy":false,"automate":true,"app_automate":false},"browserstackAutomation":true,"test_orchestration":{}}
+2025-08-22T13:59:19.188Z CLI info  [gaffar_mbBXWM]   [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2025-08-22T13:59:20.095Z CLI info [testhub:module]  [gaffar_mbBXWM]   [b9f7099f-92eb-485d-afce-3f9da3b829b4]  startBuild: response=agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy
+2025-08-22T13:59:20.096Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2025-08-22T13:59:24.745Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2025-08-22T13:59:24.813Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2025-08-22T13:59:24.855Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2025-08-22T13:59:25.415Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making GET request to https://hub-apse.browserstack.com
+2025-08-22T13:59:28.407Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:28.410Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '467fd999-0571-49ca-9bb0-3f9d134cf62d',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:28.411Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'a7fb3b7c-ee5e-4393-9b8c-f8f55ad6e7e7',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:28.413Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '6c915d73-f424-43a8-8b37-8b6940dde22a',
+    name: 'setUpClass',
+    result: 'pending',
+    test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.157Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '467fd999-0571-49ca-9bb0-3f9d134cf62d',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z',
+    finished_at: '2025-08-22T13:59:29.145Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.168Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z',
+    finished_at: '2025-08-22T13:59:29.151Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.171Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: '6c915d73-f424-43a8-8b37-8b6940dde22a',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z',
+    finished_at: '2025-08-22T13:59:29.153Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.178Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_CLASS',
+    framework: 'TestNG',
+    uuid: 'a7fb3b7c-ee5e-4393-9b8c-f8f55ad6e7e7',
+    name: 'setUpClass',
+    result: 'passed',
+    test_run_id: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:28.369Z',
+    finished_at: '2025-08-22T13:59:29.161Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.370Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:59:29.309Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-3' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.374Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:59:29.321Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-0' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.376Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: 'df121ae5-4974-4444-88a2-169913fa0472',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:59:29.317Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-1' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:29.377Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '5258789d-88ef-4753-865d-d95be29dfdda',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2025-08-22T13:59:29.319Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-2' },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:30.145Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '467fd999-0571-49ca-9bb0-3f9d134cf62d',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'a7fb3b7c-ee5e-4393-9b8c-f8f55ad6e7e7',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '6c915d73-f424-43a8-8b37-8b6940dde22a',
+      name: 'setUpClass',
+      result: 'pending',
+      test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '467fd999-0571-49ca-9bb0-3f9d134cf62d',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z',
+      finished_at: '2025-08-22T13:59:29.145Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z',
+      finished_at: '2025-08-22T13:59:29.151Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: '6c915d73-f424-43a8-8b37-8b6940dde22a',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z',
+      finished_at: '2025-08-22T13:59:29.153Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_CLASS',
+      framework: 'TestNG',
+      uuid: 'a7fb3b7c-ee5e-4393-9b8c-f8f55ad6e7e7',
+      name: 'setUpClass',
+      result: 'passed',
+      test_run_id: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:28.369Z',
+      finished_at: '2025-08-22T13:59:29.161Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:59:29.309Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:59:29.321Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: 'df121ae5-4974-4444-88a2-169913fa0472',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:59:29.317Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '5258789d-88ef-4753-865d-d95be29dfdda',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2025-08-22T13:59:29.319Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [],
+      product_map: [Object]
+    },
+    logs: []
+  }
+] to 28192:0
+2025-08-22T13:59:30.148Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:59:46.445Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:59:46.433Z',
+      uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362'
+    }
+  ]
+} to 28192:0
+2025-08-22T13:59:48.218Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 28192:0
+2025-08-22T13:59:48.219Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:59:51.336Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:59:51.333Z',
+      uuid: 'df121ae5-4974-4444-88a2-169913fa0472',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: 'df121ae5-4974-4444-88a2-169913fa0472'
+    }
+  ]
+} to 28192:0
+2025-08-22T13:59:52.235Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 28192:0
+2025-08-22T13:59:52.236Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:59:54.439Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T13:59:54.435Z',
+      uuid: '5258789d-88ef-4753-865d-d95be29dfdda',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: '5258789d-88ef-4753-865d-d95be29dfdda'
+    }
+  ]
+} to 28192:0
+2025-08-22T13:59:56.257Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 28192:0
+2025-08-22T13:59:56.257Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T13:59:57.599Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":null,"test_rerun_name":"Default test-0","test_result_at":"2025-08-22T19:29:55.600243100","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:29:29.321188","platform_index":0,"test_failure":null,"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-0@0","test_uuid":"e35da9f4-7106-4074-b6eb-5c97ffe39362","test_ended_at":"2025-08-22T19:29:55.601244900","automate_session_name":"Default test-00","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:6a440cb0","custom_metadata":{},"test_failure_reason":null,"test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"passed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:29:28.369253","hook_id":"c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:29:29.151365100","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T13:59:57.601Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'passed',
+    duration_in_ms: 26280,
+    started_at: '2025-08-22T13:59:29.321Z',
+    finished_at: '2025-08-22T13:59:55.601Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-0' },
+    hooks: [ 'c02a7f0a-ffb4-48b6-b0ea-1c6c88797eb0' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:57.654Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'faa79816-53f9-43ba-9742-493e4c064c6e',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:57.650Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:58.198Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'faa79816-53f9-43ba-9742-493e4c064c6e',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T13:59:57.650Z',
+    finished_at: '2025-08-22T13:59:58.192Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T13:59:58.262Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'passed',
+      duration_in_ms: 26280,
+      started_at: '2025-08-22T13:59:29.321Z',
+      finished_at: '2025-08-22T13:59:55.601Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'faa79816-53f9-43ba-9742-493e4c064c6e',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:57.650Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'faa79816-53f9-43ba-9742-493e4c064c6e',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: 'e35da9f4-7106-4074-b6eb-5c97ffe39362',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T13:59:57.650Z',
+      finished_at: '2025-08-22T13:59:58.192Z'
+    },
+    logs: []
+  }
+] to 28192:0
+2025-08-22T13:59:58.263Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T14:00:00.042Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":null,"test_rerun_name":"Default test-1","test_result_at":"2025-08-22T19:29:58.043022","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:29:29.317190800","platform_index":0,"test_failure":null,"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-1@1","test_uuid":"df121ae5-4974-4444-88a2-169913fa0472","test_ended_at":"2025-08-22T19:29:58.043022","automate_session_name":"Default test-11","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:5c264fdc","custom_metadata":{},"test_failure_reason":null,"test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"passed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:29:28.369253","hook_id":"6c915d73-f424-43a8-8b37-8b6940dde22a","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:29:29.153367300","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"6c915d73-f424-43a8-8b37-8b6940dde22a","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T14:00:00.042Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: 'df121ae5-4974-4444-88a2-169913fa0472',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'passed',
+    duration_in_ms: 28726,
+    started_at: '2025-08-22T13:59:29.317Z',
+    finished_at: '2025-08-22T13:59:58.043Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-1' },
+    hooks: [ '6c915d73-f424-43a8-8b37-8b6940dde22a' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:00.092Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'badd2511-448c-4a85-9e82-8af6655a89d1',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T14:00:00.086Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:00.160Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: 'badd2511-448c-4a85-9e82-8af6655a89d1',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T14:00:00.086Z',
+    finished_at: '2025-08-22T14:00:00.154Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:00.263Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: 'df121ae5-4974-4444-88a2-169913fa0472',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'passed',
+      duration_in_ms: 28726,
+      started_at: '2025-08-22T13:59:29.317Z',
+      finished_at: '2025-08-22T13:59:58.043Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'badd2511-448c-4a85-9e82-8af6655a89d1',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T14:00:00.086Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: 'badd2511-448c-4a85-9e82-8af6655a89d1',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: 'df121ae5-4974-4444-88a2-169913fa0472',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T14:00:00.086Z',
+      finished_at: '2025-08-22T14:00:00.154Z'
+    },
+    logs: []
+  }
+] to 28192:0
+2025-08-22T14:00:00.263Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T14:00:03.636Z CLI warn [TEST REPORTING AND ANALYTICS:java:testng]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  TestRunFinished: event={"test_hook_last_started":"BEFORE_CLASS","test_failure_type":null,"test_rerun_name":"Default test-2","test_result_at":"2025-08-22T19:30:01.128274","test_scope":"Default suite.Runners.WebRunner","test_framework_name":"TestNG","test_tags":["cucumber"],"test_started_at":"2025-08-22T19:29:29.319192700","platform_index":0,"test_failure":null,"test_framework_version":"7.0.0","test_logs":[],"test_scopes":["Default suite","Runners.WebRunner"],"test_code":"public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)","test_id":"Default test-2@2","test_uuid":"5258789d-88ef-4753-865d-d95be29dfdda","test_ended_at":"2025-08-22T19:30:01.128274","automate_session_name":"Default test-22","test_hook_last_finished":"BEFORE_CLASS","test_session_name":"Runners.WebRunner-runScenario","test_hook_state":"sdk:hook:bfaae52e","custom_metadata":{},"test_failure_reason":null,"test_location":"src\\test\\java\\Runners\\WebRunner.java","test_hooks_started":{"BEFORE_CLASS":[]},"test_file_path":"src\\test\\java\\Runners\\WebRunner.java","test_result":"passed","test_hooks_finished":{"BEFORE_CLASS":[{"hook_name":"setUpClass","hook_result":"passed","test_file_path":"API\\src\\test\\java\\Runners\\WebRunner.java","event_started_at":"2025-08-22T19:29:28.369253","hook_id":"467fd999-0571-49ca-9bb0-3f9d134cf62d","hook_logs":[],"logs":[],"key":"BEFORE_CLASS","custom_metadata":{},"event_ended_at":"2025-08-22T19:29:29.145366700","test_location":"API\\src\\test\\java\\Runners\\WebRunner.java"}]},"hook_id":"467fd999-0571-49ca-9bb0-3f9d134cf62d","test_meta":{"data_provider_name":"scenarios"},"isBrowserstackAutomationSession":true,"test_name":"runScenario (\"as  a user i\tcan verify food menu ovet hero module\", \"Optional[Hero Feature file]\")","logs":[]}
+2025-08-22T14:00:03.637Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'TestNG',
+    uuid: '5258789d-88ef-4753-865d-d95be29dfdda',
+    name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    body: {
+      lang: 'java',
+      code: 'public void io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)'
+    },
+    identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+    scope: 'Default suite.Runners.WebRunner',
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+    location: 'src\\test\\java\\Runners\\WebRunner.java',
+    meta: { data_provider_name: 'scenarios' },
+    result: 'passed',
+    duration_in_ms: 31809,
+    started_at: '2025-08-22T13:59:29.319Z',
+    finished_at: '2025-08-22T14:00:01.128Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [ 'cucumber' ],
+    customRerunParam: { rerun_name: 'Default test-2' },
+    hooks: [ '467fd999-0571-49ca-9bb0-3f9d134cf62d' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:03.681Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '29861dd7-e70f-4fd7-a3b9-089dc630f36b',
+    name: 'tearDownClass',
+    result: 'pending',
+    test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T14:00:03.676Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:03.768Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_CLASS',
+    framework: 'TestNG',
+    uuid: '29861dd7-e70f-4fd7-a3b9-089dc630f36b',
+    name: 'tearDownClass',
+    result: 'passed',
+    test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+    body: { lang: 'java', code: null },
+    scope: 'Default suite.Runners.WebRunner',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'Default suite', 'Runners.WebRunner' ],
+    file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+    started_at: '2025-08-22T14:00:03.676Z',
+    finished_at: '2025-08-22T14:00:03.761Z'
+  },
+  logs: []
+} to 28192:0
+2025-08-22T14:00:04.274Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'TestNG',
+      uuid: '5258789d-88ef-4753-865d-d95be29dfdda',
+      name: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      body: [Object],
+      identifier: 'runScenario ("as  a user i\tcan verify food menu ovet hero module", "Optional[Hero Feature file]")',
+      scope: 'Default suite.Runners.WebRunner',
+      scopes: [Array],
+      file_name: 'src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'src\\test\\java\\Runners\\WebRunner.java',
+      location: 'src\\test\\java\\Runners\\WebRunner.java',
+      meta: [Object],
+      result: 'passed',
+      duration_in_ms: 31809,
+      started_at: '2025-08-22T13:59:29.319Z',
+      finished_at: '2025-08-22T14:00:01.128Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: {},
+      tags: [Array],
+      customRerunParam: [Object],
+      hooks: [Array],
+      product_map: [Object]
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '29861dd7-e70f-4fd7-a3b9-089dc630f36b',
+      name: 'tearDownClass',
+      result: 'pending',
+      test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T14:00:03.676Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'AFTER_CLASS',
+      framework: 'TestNG',
+      uuid: '29861dd7-e70f-4fd7-a3b9-089dc630f36b',
+      name: 'tearDownClass',
+      result: 'passed',
+      test_run_id: '5258789d-88ef-4753-865d-d95be29dfdda',
+      body: [Object],
+      scope: 'Default suite.Runners.WebRunner',
+      custom_metadata: {},
+      tags: [],
+      scopes: [Array],
+      file_name: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      vc_filepath: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      location: 'API\\src\\test\\java\\Runners\\WebRunner.java',
+      started_at: '2025-08-22T14:00:03.676Z',
+      finished_at: '2025-08-22T14:00:03.761Z'
+    },
+    logs: []
+  }
+] to 28192:0
+2025-08-22T14:00:04.275Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2025-08-22T14:00:18.292Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'TestNG',
+      testFrameworkVersion: '7.0.0',
+      testFrameworkState: 'LOG',
+      timestamp: '2025-08-22T14:00:18.289Z',
+      uuid: '66b59b2b-010f-4a38-8219-1e4a03178b9b',
+      kind: 'TEST_LOG',
+      message: '"page landed"',
+      level: 'INFO',
+      test_run_uuid: '66b59b2b-010f-4a38-8219-1e4a03178b9b'
+    }
+  ]
+} to 28192:0
+2025-08-22T14:00:18.329Z CLI info [testhub:request-queue-handler]  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  Processing batch event [ { event_type: 'LogCreated', logs: [ [Object] ] } ] to 28192:0
+2025-08-22T14:00:18.330Z CLI info  [gaffar_mbBXWM]  [agqgw3eqkicnbtvthafyer5prvjnj6wzhverwrhy]  [b9f7099f-92eb-485d-afce-3f9da3b829b4]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com

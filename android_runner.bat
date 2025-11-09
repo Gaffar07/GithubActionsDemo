@@ -1,0 +1,1 @@
+mvn test -Dcucumber.filter.tags=@indoortag -Drunner=AndroidRunner.java -Dapp=android -Dtestenv=stg -Dthreadcount=3

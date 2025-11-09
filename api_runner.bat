@@ -1,0 +1,1 @@
+mvn test -Dcucumber.filter.tags=@api -Drunner=ApiRunner.java -Dapp=api -Dtestenv=stg -Dthreadcount=3

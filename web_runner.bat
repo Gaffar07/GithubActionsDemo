@@ -1,0 +1,1 @@
+mvn test -Dcucumber.filter.tags=@indoor2 -Drunner=WebRunner.java -Dapp=Web -Dtestenv=stg -Dthreadcount=2
