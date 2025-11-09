@@ -21,7 +21,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build and run Smoke tests
-      run: mvn clean verify -Dcucumber.filter.tags="@Hero1"
+      run: mvn clean test -Dcucumber.filter.tags="@Hero1"
 
     - name: Find latest report folder
       id: find_report
