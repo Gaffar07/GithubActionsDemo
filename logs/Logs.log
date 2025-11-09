@@ -299,3 +299,14 @@
 16:36:08.812 [TestNG-PoolService-0] INFO  Hooks.Hooks - Runname  is - 
 16:36:09.049 [TestNG-PoolService-0] ERROR Hooks.Hooks - Either milestoneId or runName is Empty.Please update correct values
 16:36:09.051 [TestNG-PoolService-0] INFO  Hooks.Hooks - Test Result: PASSED
+17:02:14.883 [TestNG-PoolService-0] INFO  Hooks.Hooks - Starting scenario: as  a user i	can verify food menu ovetr hero module
+17:02:14.885 [TestNG-PoolService-0] INFO  Hooks.Hooks - Initializing Web driver
+17:02:17.374 [TestNG-PoolService-0] INFO  web.LoginPage - Opened Test URL: https://acme-test.uipath.com/login
+17:02:17.493 [TestNG-PoolService-0] INFO  web.LoginPage - Entered email id as: abdul.shaikh@aqmtechnologies.com
+17:02:17.588 [TestNG-PoolService-0] INFO  web.LoginPage - Entered valid password
+17:02:21.227 [TestNG-PoolService-0] INFO  web.LoginPage - Clicked on Sign in
+17:02:21.310 [TestNG-PoolService-0] INFO  web.LoginPage - User is Logged in 
+17:02:21.312 [TestNG-PoolService-0] INFO  Hooks.Hooks - Milestone id is - 
+17:02:21.312 [TestNG-PoolService-0] INFO  Hooks.Hooks - Runname  is - 
+17:02:21.551 [TestNG-PoolService-0] ERROR Hooks.Hooks - Either milestoneId or runName is Empty.Please update correct values
+17:02:21.554 [TestNG-PoolService-0] INFO  Hooks.Hooks - Test Result: PASSED

@@ -3254,3 +3254,13 @@
 2025-11-09T11:05:59.410Z CLI debug [appautomate:service]     loaded module: appautomate:module
 2025-11-09T11:05:59.463Z CLI debug [main]     Starting main function execution
 2025-11-09T11:05:59.464Z CLI debug [main]     Executing CLI
+2025-11-09T11:32:13.304Z CLI debug [testhub:service]     loaded module: _0x2b0048
+2025-11-09T11:32:13.304Z CLI debug [instrumentation:service]     loaded module: instrumentation:module
+2025-11-09T11:32:13.304Z CLI debug [TEST REPORTING AND ANALYTICS:service]     loaded module: observability:module
+2025-11-09T11:32:13.304Z CLI debug [accessibility:service]     loaded module: accessibility:module
+2025-11-09T11:32:13.304Z CLI debug [ai:service]     loaded module: _0x40ea64
+2025-11-09T11:32:13.305Z CLI debug [percy:service]     loaded module: _0x55490e
+2025-11-09T11:32:13.305Z CLI debug [local:service]     loaded module: _0xbd69d3
+2025-11-09T11:32:13.305Z CLI debug [appautomate:service]     loaded module: appautomate:module
+2025-11-09T11:32:13.361Z CLI debug [main]     Starting main function execution
+2025-11-09T11:32:13.362Z CLI debug [main]     Executing CLI
