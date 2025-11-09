@@ -107,6 +107,7 @@ public class LoginPage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOf(LoginSuccess));
 		Assert.assertTrue(LoginSuccess.isDisplayed(), "User is not Logged in");
 		LOG.info("User is Logged in ");
+		System.out.println("logo found!!!");
 	}
 
 //	public void verifyLoginStatusWithProductsOnTray() {
