@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: cucumber-smoke-report
-        path: target/cucumber-html-report
+        path: test-report/*/index.html
