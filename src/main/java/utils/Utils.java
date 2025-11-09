@@ -241,8 +241,6 @@ public class Utils {
 	}
 
 	public static void sendSlackChatNotificationUsingBolt(String messageToSend) {
-		// Slack integration
-//		String token = "xoxb-8386049901685-8411872210864-N9sEJEIzjvDQgwDKvO8h7Bz0";
 		String token = loader.getProperty("slackAppToken");
 //		String channelId = "C08BEPY7LBD";
 		String channelId = loader.getProperty("slackChannelId");
