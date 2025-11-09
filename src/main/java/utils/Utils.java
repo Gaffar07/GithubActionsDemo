@@ -241,8 +241,8 @@ public class Utils {
 	}
 
 	public static void sendSlackChatNotificationUsingBolt(String messageToSend) {
-		String token = loader.getProperty("slackAppToken");
-		String channelId = loader.getProperty("slackChannelId");
+		String token = loader.getProperty("");
+		String channelId = loader.getProperty("");
 		Slack slack = Slack.getInstance();
 
 		MethodsClient methods = slack.methods(token);
