@@ -20,30 +20,27 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    # 🧩 Run your tagged tests (parallel safe)
     - name: Build and run Smoke tests
-      run: mvn clean test -Dcucumber.filter.tags="@Hero"
+      run: mvn clean test -Dcucumber.filter.tags="@Hero" -Ddataproviderthreadcount=3
 
-    - name: Find latest report folder
-      id: find_report
+    # 🧩 Combine all timestamped report folders
+    - name: Merge all timestamped Extent reports
+      if: always()
       run: |
-        latest=$(ls -td test-reports/*/ 2>/dev/null | head -1)
-        if [ -z "$latest" ]; then
-          echo "No report folder found"
-          echo "latest_report=" >> $GITHUB_OUTPUT
-        else
-          echo "Found report folder: $latest"
-          echo "latest_report=$latest" >> $GITHUB_OUTPUT
-        fi
+        mkdir -p test-reports/final
+        for folder in test-reports/*/; do
+          if [ -d "$folder" ]; then
+            echo "Merging reports from $folder"
+            cp -r "$folder"* test-reports/final/ || true
+          fi
+        done
+        echo "Final merged reports available under test-reports/final"
 
-
-    - name: Upload Cucumber HTML report
-      if: ${{ steps.find_report.outputs.latest_report != '' }}
+    # 🧩 Upload the merged HTML + PDF reports as artifact
+    - name: Upload Cucumber/Extent HTML Report
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: cucumber-smoke-report
-        path: ${{ steps.find_report.outputs.latest_report }}
-        
-    
-
-
-
+        path: test-reports/final/
