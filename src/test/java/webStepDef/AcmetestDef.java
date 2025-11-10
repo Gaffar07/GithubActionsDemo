@@ -65,5 +65,13 @@ public class AcmetestDef {
 	    //throw new io.cucumber.java.PendingException();
 		loginPage.verifyLoginSuccess();
 	}
+	
+	
+	@Then("I Also Verify Page Title is {string}")
+	public void verifyTitle(String s) {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new io.cucumber.java.PendingException();
+		loginPage.verifyPageTitle(s);
+	}
 
 }

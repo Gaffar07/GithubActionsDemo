@@ -109,6 +109,15 @@ public class LoginPage extends BasePage {
 		LOG.info("User is Logged in ");
 		
 	}
+	
+	public void verifyPageTitle(String s) {
+		wait.until(ExpectedConditions.visibilityOf(LoginSuccess));
+		Assert.assertEquals(driver.getTitle(), "ACME System 1 - Dashboard");
+		LOG.info("User is Logged in ");
+		
+	}
+	
+	
 
 //	public void verifyLoginStatusWithProductsOnTray() {
 //		Assert.assertTrue(userName.isDisplayed(), " User is not Logged in");
