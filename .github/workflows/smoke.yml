@@ -1,3 +1,5 @@
+
+
 name: Run Smoke Tests
 
 on:
@@ -20,38 +22,25 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    # 🧩 Run Cucumber smoke tests (parallel safe)
     - name: Build and run Smoke tests
-      run: mvn clean test -Dcucumber.filter.tags="@Hero" -Ddataproviderthreadcount=3
+      run: mvn clean test -Dcucumber.filter.tags="@Hero"
 
-    # 🧩 Find the latest timestamped test-reports folder
     - name: Find latest report folder
       id: find_report
-      if: always()
       run: |
         latest=$(ls -td test-reports/*/ 2>/dev/null | head -1)
         if [ -z "$latest" ]; then
           echo "No report folder found"
           echo "latest_report=" >> $GITHUB_OUTPUT
         else
-          echo "Found latest report folder: $latest"
+          echo "Found report folder: $latest"
           echo "latest_report=$latest" >> $GITHUB_OUTPUT
         fi
 
-    # 🧩 Optionally rename report for consistent naming
-    - name: Rename report for artifact consistency
-      if: ${{ steps.find_report.outputs.latest_report != '' }}
-      run: |
-        mkdir -p test-reports/final
-        cp -r "${{ steps.find_report.outputs.latest_report }}"* test-reports/final/
-        if [ -f test-reports/final/automation-execution-report.html ]; then
-          mv test-reports/final/automation-execution-report.html test-reports/final/final-automation-report.html
-        fi
 
-    # 🧩 Upload final HTML/PDF reports
-    - name: Upload Cucumber/Extent Reports
-      if: always()
+    - name: Upload Cucumber HTML report
+      if: ${{ steps.find_report.outputs.latest_report != '' }}
       uses: actions/upload-artifact@v4
       with:
         name: cucumber-smoke-report
-        path: test-reports/final/
+        path: ${{ steps.find_report.outputs.latest_report }}
