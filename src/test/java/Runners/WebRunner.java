@@ -12,8 +12,13 @@ import io.cucumber.testng.CucumberOptions;
 		features= {"./src/test/resources/web_features"},
 		glue= {"Hooks","webStepDef"},
 		tags="@Hero",
-		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"timeline:test-output-timelines/","rerun:target/rerun.txt"},monochrome = true
+		plugin = {
+				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				  "json:target/cucumber.json",
+				  "timeline:test-output-timelines/",
+				  "rerun:target/rerun.txt"
+				}
+
 	)
 
 public class WebRunner  extends AbstractTestNGCucumberTests{
