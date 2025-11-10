@@ -113,7 +113,7 @@ public class LoginPage extends BasePage {
 	public void verifyPageTitle(String s) {
 		wait.until(ExpectedConditions.visibilityOf(LoginSuccess));
 		Assert.assertEquals(driver.getTitle(), "ACME System 1 - Dashboard");
-		LOG.info("User is Logged in ");
+		LOG.info("page Title match");
 		
 	}
 	
