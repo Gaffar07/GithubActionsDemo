@@ -2,7 +2,7 @@
 
 Feature: Hero Feature file
 
-@Hero1 @TC01 @Medium
+@Hero @TC01 @Medium
 Scenario: as  a user i	can verify food menu ovetr hero module
 Given i am in Acmetest Home Page
 And i Sign in as normal user
