@@ -22,8 +22,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build and run Smoke tests
-      run: mvn clean test -Dcucumber.filter.tags="@Hero"
+    - name: Clean, rebuild, and run Smoke tests (no cache)
+      run: |
+        mvn clean install -U -DskipTests
+        mvn test -Dcucumber.filter.tags="@Hero"
 
     - name: Find latest report folder
       id: find_report
