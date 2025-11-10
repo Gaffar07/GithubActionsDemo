@@ -222,6 +222,27 @@
     <testFailureIgnore>${failureignore}</testFailureIgnore>
   </configuration>
 </plugin>
+
+<plugin>
+  <groupId>tech.grasshopper</groupId>
+  <artifactId>extentreports-cucumber-json-merger</artifactId>
+  <version>1.2.1</version>
+  <executions>
+    <execution>
+      <id>merge-json</id>
+      <phase>verify</phase>
+      <goals>
+        <goal>merge</goal>
+      </goals>
+      <configuration>
+        <inputDir>target/extent-json</inputDir>
+        <outputFile>target/extent-json/merged_extent.json</outputFile>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+
+
 		
 		
 	</plugins>
