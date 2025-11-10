@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 		
 		features= {"./src/test/resources/web_features"},
 		glue= {"Hooks","webStepDef"},
-		tags="@Hero2",
+		tags="@Hero",
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-timelines/","rerun:target/rerun.txt"},monochrome = true
 	)

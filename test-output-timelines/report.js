@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"fd07a00b-f61d-406b-9397-21700df26a05","feature":"Hero Feature file","scenario":"as  a user i\tcan verify food menu ovetr hero module","start":1762780234721,"group":22,"content":"","tags":"@hoome,@hero,@regression,@noorder,@hero2,@tc01,@medium,","end":1762780242143,"className":"passed"}]);
-CucumberHTML.timelineGroups.pushArray([{"id":22,"content":"Thread[TestNG-PoolService-0,5,main]"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"041ca524-bbac-4d56-914e-0704e4c5d4ad","feature":"Hero Feature file","scenario":"as  a user i\tcan verify food menu ovetr hero module and Page Title as well","start":1762780837176,"group":23,"content":"","tags":"@hoome,@hero,@regression,@noorder,@hero,@tc01,@medium,","end":1762780844564,"className":"passed"},{"id":"6d018aa5-be65-426a-8d70-7966f032915d","feature":"Hero Feature file","scenario":"as  a user i\tcan verify food menu ovetr hero module","start":1762780837120,"group":22,"content":"","tags":"@hoome,@hero,@regression,@noorder,@hero,@tc01,@medium,","end":1762780844564,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":22,"content":"Thread[TestNG-PoolService-0,5,main]"},{"id":23,"content":"Thread[TestNG-PoolService-1,5,main]"}]);
 });

@@ -339,3 +339,26 @@
 18:40:41.779 [TestNG-PoolService-0] INFO  Hooks.Hooks - Runname  is - 
 18:40:42.000 [TestNG-PoolService-0] ERROR Hooks.Hooks - Either milestoneId or runName is Empty.Please update correct values
 18:40:42.000 [TestNG-PoolService-0] INFO  Hooks.Hooks - Test Result: PASSED
+18:50:37.552 [TestNG-PoolService-0] INFO  Hooks.Hooks - Starting scenario: as  a user i	can verify food menu ovetr hero module
+18:50:37.552 [TestNG-PoolService-1] INFO  Hooks.Hooks - Starting scenario: as  a user i	can verify food menu ovetr hero module and Page Title as well
+18:50:37.554 [TestNG-PoolService-1] INFO  Hooks.Hooks - Initializing Web driver
+18:50:37.554 [TestNG-PoolService-0] INFO  Hooks.Hooks - Initializing Web driver
+18:50:39.794 [TestNG-PoolService-0] INFO  web.LoginPage - Opened Test URL: https://acme-test.uipath.com/login
+18:50:39.828 [TestNG-PoolService-1] INFO  web.LoginPage - Opened Test URL: https://acme-test.uipath.com/login
+18:50:39.947 [TestNG-PoolService-0] INFO  web.LoginPage - Entered email id as: abdul.shaikh@aqmtechnologies.com
+18:50:39.991 [TestNG-PoolService-1] INFO  web.LoginPage - Entered email id as: abdul.shaikh@aqmtechnologies.com
+18:50:40.067 [TestNG-PoolService-0] INFO  web.LoginPage - Entered valid password
+18:50:40.128 [TestNG-PoolService-1] INFO  web.LoginPage - Entered valid password
+18:50:44.012 [TestNG-PoolService-1] INFO  web.LoginPage - Clicked on Sign in
+18:50:44.083 [TestNG-PoolService-0] INFO  web.LoginPage - Clicked on Sign in
+18:50:44.127 [TestNG-PoolService-1] INFO  web.LoginPage - User is Logged in 
+18:50:44.162 [TestNG-PoolService-0] INFO  web.LoginPage - User is Logged in 
+18:50:44.163 [TestNG-PoolService-0] INFO  Hooks.Hooks - Milestone id is - 
+18:50:44.163 [TestNG-PoolService-0] INFO  Hooks.Hooks - Runname  is - 
+18:50:44.168 [TestNG-PoolService-1] INFO  web.LoginPage - User is Logged in 
+18:50:44.169 [TestNG-PoolService-1] INFO  Hooks.Hooks - Milestone id is - 
+18:50:44.170 [TestNG-PoolService-1] INFO  Hooks.Hooks - Runname  is - 
+18:50:44.391 [TestNG-PoolService-0] ERROR Hooks.Hooks - Either milestoneId or runName is Empty.Please update correct values
+18:50:44.391 [TestNG-PoolService-1] ERROR Hooks.Hooks - Either milestoneId or runName is Empty.Please update correct values
+18:50:44.391 [TestNG-PoolService-1] INFO  Hooks.Hooks - Test Result: PASSED
+18:50:44.391 [TestNG-PoolService-0] INFO  Hooks.Hooks - Test Result: PASSED
