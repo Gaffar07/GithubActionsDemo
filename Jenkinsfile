@@ -1,14 +1,25 @@
 pipeline {
     agent any
 
+    environment {
+        // Optional: Set any environment variables here
+        MAVEN_OPTS = "-Xms256m -Xmx1024m"
+    }
+
     stages {
+        stage('Checkout SCM') {
+            steps {
+                checkout scm
+            }
+        }
 
         stage('Build & Test (Smoke Only)') {
             steps {
+                echo "Running Cucumber tests with tag @Hero..."
                 bat """
                     mvn clean test ^
-                        -Dcucumber.filter.tags='@Hero' ^
-                        -Dmaven.test.failure.ignore=true
+                    -Dcucumber.filter.tags='@Hero' ^
+                    -Dmaven.test.failure.ignore=true
                 """
             }
         }
@@ -16,46 +27,35 @@ pipeline {
         stage('Publish Report') {
             steps {
                 script {
+                    // Fixed path for Extent Report
+                    def reportPath = "target/extent-report/automation-execution-report.html"
 
-                    // --- Find latest test-reports folder ---
-                    def folderName = bat(
-                        script: '@for /f "delims=" %%i in (\'dir /b /ad /o-d "test-reports"\') do @echo %%i & exit /b',
-                        returnStdout: true
-                    ).trim()
-
-                    echo "Detected Report Folder Name: ${folderName}"
-
-                    // Build full folder path
-                    def reportFolder = "test-reports\\${folderName}"
-                    def reportFile = "${reportFolder}\\automation-execution-report.html"
-
-                    echo "Resolved Report Folder: ${reportFolder}"
-                    echo "Resolved Report File: ${reportFile}"
-
-                    // --- Validate report exists ---
-                    if (fileExists(reportFile)) {
-
+                    if (fileExists(reportPath)) {
+                        echo "Publishing HTML report: ${reportPath}"
                         publishHTML([
-                            reportDir: reportFolder,
-                            reportFiles: 'automation-execution-report.html',
-                            reportName: 'Extent Report',
+                            allowMissing: false,
                             alwaysLinkToLastBuild: true,
-                            keepAll: true
+                            keepAll: true,
+                            reportDir: 'target/extent-report',
+                            reportFiles: 'automation-execution-report.html',
+                            reportName: "Automation Execution Report"
                         ])
-
                     } else {
-                        error "❌ Report not found at: ${reportFile}"
+                        error "❌ Report not found at: ${reportPath}"
                     }
                 }
             }
         }
-
-    } // end stages
+    }
 
     post {
         always {
-            // archive everything under test-reports
-            archiveArtifacts artifacts: 'test-reports/**/*.*', allowEmptyArchive: true
+            echo "Archiving test results..."
+            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
+        }
+
+        failure {
+            echo "Build failed! Check logs and report for details."
         }
     }
 }
