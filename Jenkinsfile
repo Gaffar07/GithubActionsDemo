@@ -26,9 +26,15 @@ pipeline {
         stage('Publish Report') {
             steps {
                 script {
-                    // Detect the latest timestamped folder under test-reports
+                    // Detect latest timestamped folder under test-reports (Windows)
                     def latestFolder = bat(
-                        script: 'for /f "tokens=*" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & exit', 
+                        script: '''
+                            for /f "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
+                                echo %%i
+                                goto :done
+                            )
+                            :done
+                        ''',
                         returnStdout: true
                     ).trim()
 
