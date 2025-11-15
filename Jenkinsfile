@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo "Running Cucumber tests with tag @Hero..."
                 bat """
-                    mvn clean install -U -DskipTests
+                    mvn clean install -U
                     mvn clean test -Dcucumber.filter.tags="@Hero"
                 """
             }
