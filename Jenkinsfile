@@ -36,7 +36,7 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: 'test-reports/**', fingerprint: true
-            archiveArtifacts artifacts: 'target/cucumber.json', fingerprint: true
+            
         }
     }
 }
