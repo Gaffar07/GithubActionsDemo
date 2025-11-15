@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                bat 'mvn clean test -Dcucumber.filter.tags="@Hero"'
+                bat 'mvn clean test -Dcucumber.filter.tags="@Hero" -Dcucumber.plugin="json:target/cucumber.json" -Dextent.reporter.html.start=true -Dextent.reporter.html.out=test-reports/ExtentReport.html '
             }
         }
 
