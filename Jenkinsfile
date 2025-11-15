@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     tools {
+        // REMOVE this line if Jenkins does not have JDK17 configured
         jdk 'JDK17'
         maven 'MAVEN3'
     }
@@ -28,10 +29,13 @@ pipeline {
 
         stage('Publish Cucumber Report') {
             steps {
-                publishHTML([
+                publishHTML(target: [
                     reportDir: 'target/cucumber-html-reports',
                     reportFiles: 'overview-features.html',
-                    reportName: 'Cucumber Report'
+                    reportName: 'Cucumber Report',
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true
                 ])
             }
         }
@@ -39,7 +43,6 @@ pipeline {
         stage('Publish Extent Report') {
             steps {
                 script {
-                    // find the latest timestamped report folder
                     def latestFolder = sh(
                         script: "ls -td test-reports/*/ | head -1",
                         returnStdout: true
@@ -47,10 +50,13 @@ pipeline {
 
                     echo "Latest Extent Report Folder: ${latestFolder}"
 
-                    publishHTML([
+                    publishHTML(target: [
                         reportDir: latestFolder,
                         reportFiles: 'automation-execution-report.html',
-                        reportName: 'Extent Report'
+                        reportName: 'Extent Report',
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true
                     ])
                 }
             }
