@@ -69,7 +69,7 @@ pipeline {
                 expression { latestReport != null }
             }
             steps {
-                echo "Archiving report folder: test-reports\\${latestReport}"
+                echo "Archiving report folder: test-reports/latest/**/*", allowEmptyArchive: true"
                 archiveArtifacts artifacts: "test-reports\\${latestReport}\\**/*", allowEmptyArchive: true
             }
         }
