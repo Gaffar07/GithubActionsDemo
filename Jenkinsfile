@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-  
+    stages {
 
         stage('Build & Test (Smoke Only)') {
             steps {
@@ -12,6 +12,8 @@ pipeline {
         stage('Publish Report') {
             steps {
                 script {
+
+                    // Get latest test-reports folder
                     def reportFolder = bat(
                         script: 'for /f "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%i & exit /b',
                         returnStdout: true
@@ -19,6 +21,7 @@ pipeline {
 
                     echo "Latest Report Folder: ${reportFolder}"
 
+                    // Extent report file path
                     def reportFile = "${reportFolder}\\automation-execution-report.html"
 
                     if (fileExists(reportFile)) {
@@ -35,7 +38,8 @@ pipeline {
                 }
             }
         }
-    
+
+    } // end stages
 
     post {
         always {
