@@ -22,7 +22,6 @@ pipeline {
     					script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
     					returnStdout: true
 					).trim()
-
                     publishHTML([
                         reportDir: latestReportDir,
                         reportFiles: 'automation-execution-report.html',
