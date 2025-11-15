@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run Cucumber Tests') {
             steps {
-                bat 'mvn test -Dcucumber.filter.tags="@smoke"'
+                bat 'mvn test -Dcucumber.filter.tags="@Hero"'
             }
         }
 
