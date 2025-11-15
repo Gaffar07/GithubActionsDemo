@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                sh 'mvn clean test -Dcucumber.filter.tags="@Hero"'
+                bat 'mvn clean test -Dcucumber.filter.tags="@Hero"'
 
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Find the most recent timestamped folder under test-reports
-                    def latestReportDir = sh(
+                    def latestReportDir = bat(
                         script: "ls -td test-reports/*/ | head -1",
                         returnStdout: true
                     ).trim()
