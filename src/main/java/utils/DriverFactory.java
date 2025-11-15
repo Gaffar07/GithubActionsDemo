@@ -103,7 +103,7 @@ public class DriverFactory {
 
 					// Adding cpabilities to ChromeOptions
 					ChromeOptions options = new ChromeOptions();
-					//options.addArguments("--headless=new"); 
+					options.addArguments("--headless=new"); 
 					options.setExperimentalOption("prefs", prefs);
 					
 					// options.setHeadless(true);
