@@ -2,116 +2,99 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17" // Adjust if needed
-        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
+        BASE_REPORT_FOLDER = "test-reports"
     }
 
     stages {
 
-        stage('Checkout Code') {
+        stage('Checkout SCM') {
             steps {
-                echo 'Checking out code from Git...'
-                checkout([$class: 'GitSCM', 
-                    branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[url: 'https://github.com/Gaffar07/GithubActionsDemo.git']]
-                ])
+                checkout scm
             }
         }
 
-        stage('Set up JDK 17') {
-            steps {
-                echo 'Using JDK 17...'
-                bat 'java -version'
-            }
-        }
-
-        stage('Clean, Build & Run Smoke Tests') {
-            steps {
-                echo 'Running Maven clean, install and Cucumber tests...'
-                bat '''
-                    mvn clean install -U -DskipTests
-                    mvn test -Dcucumber.filter.tags="@Hero"
-                '''
-            }
-        }
-
-        stage('Find Latest Report Folder') {
+        stage('Clean Latest Report') {
             steps {
                 script {
-                    echo 'Finding latest test report folder...'
-                    latestReport = bat(
-                        script: '''
-                            @echo off
-                            setlocal enabledelayedexpansion
-                            set latest=
-                            for /f "tokens=*" %%i in ('dir /b /ad /o-d test-reports') do (
-                                set latest=%%i
-                                goto done
-                            )
-                            :done
-                            echo !latest!
-                        ''',
-                        returnStdout: true
-                    ).trim()
-
-                    if (latestReport == "") {
-                        echo "No report folder found."
-                        latestReport = null
+                    echo "Cleaning latest report folder..."
+                    if (isUnix()) {
+                        sh "rm -rf ${BASE_REPORT_FOLDER}/latest || true"
                     } else {
-                        echo "Latest report folder: ${latestReport}"
+                        bat "rmdir /s /q ${BASE_REPORT_FOLDER}\\latest || echo Folder not found"
                     }
                 }
             }
         }
 
-     stage('Send Latest Cucumber HTML Report via Email') {
-    steps {
-        script {
-            // Detect latest report folder dynamically
-            def latestReport = ''
-            if (isUnix()) {
-                // Linux / macOS
-                latestReport = sh(
-                    script: "ls -td test-reports/*/ 2>/dev/null | head -1",
-                    returnStdout: true
-                ).trim()
-            } else {
-                // Windows
-                latestReport = bat(
-                    script: 'for /F "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & goto :done',
-                    returnStdout: true
-                ).trim()
-            }
-
-            if (!latestReport) {
-                echo "No report folder found. Skipping email."
-            } else {
-                // Construct full path to HTML report
-                def reportPath = "${latestReport}/automation-execution-report.html"
-                echo "Sending report via email: ${reportPath}"
-
-                // Send email with Email Extension Plugin
-                emailext(
-                    subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                    body: """
-                        <p>Hello Team,</p>
-                        <p>The latest Cucumber test execution report is attached.</p>
-                        <p>Job: ${env.JOB_NAME} <br/>
-                        Build Number: ${env.BUILD_NUMBER} <br/>
-                        Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                    """,
-                    to: "gaffarshaikh07@gmail.com",   // Replace/add recipients here
-                    attachmentsPattern: reportPath,
-                    mimeType: 'text/html'
-                )
+        stage('Build & Run Cucumber Tests') {
+            steps {
+                echo "Running Cucumber tests with tag @Hero..."
+                bat """
+                    mvn clean install -U -DskipTests
+                    mvn test -Dcucumber.filter.tags="@Hero"
+                """
             }
         }
-    }
-}
+
+        stage('Detect Latest Report Folder') {
+            steps {
+                script {
+                    def latestReport = ''
+                    if (isUnix()) {
+                        latestReport = sh(
+                            script: "ls -td ${BASE_REPORT_FOLDER}/*/ 2>/dev/null | head -1",
+                            returnStdout: true
+                        ).trim()
+                    } else {
+                        latestReport = bat(
+                            script: 'for /F "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & goto :done',
+                            returnStdout: true
+                        ).trim()
+                    }
+
+                    if (!latestReport) {
+                        echo "No report folder found."
+                        currentBuild.description = "No report generated"
+                        env.LATEST_REPORT = ''
+                    } else {
+                        echo "Latest report folder detected: ${latestReport}"
+                        env.LATEST_REPORT = latestReport
+                    }
+                }
+            }
+        }
+
+        stage('Send Latest Report via Email') {
+            when {
+                expression { env.LATEST_REPORT != '' }
+            }
+            steps {
+                script {
+                    def reportPath = "${env.LATEST_REPORT}/automation-execution-report.html"
+                    echo "Sending report via email: ${reportPath}"
+
+                    emailext(
+                        subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                        body: """
+                            <p>Hello Team,</p>
+                            <p>The latest Cucumber test execution report is attached.</p>
+                            <p>Job: ${env.JOB_NAME} <br/>
+                            Build Number: ${env.BUILD_NUMBER} <br/>
+                            Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                        """,
+                        to: "gaffarshaikh07@gmail.com",
+                        attachmentsPattern: reportPath,
+                        mimeType: 'text/html'
+                    )
+                }
+            }
+        }
+
+    } // end stages
 
     post {
         always {
-            echo 'Pipeline finished!'
+            echo "Pipeline finished. Check email and workspace for reports."
         }
     }
 }
