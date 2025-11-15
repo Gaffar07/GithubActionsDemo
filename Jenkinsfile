@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                bat 'mvn clean test -Dcucumber.filter.tags="@Hero1"'
+                bat 'mvn clean test -Dcucumber.filter.tags="@Hero"'
             }
         }
 
