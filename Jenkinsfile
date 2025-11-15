@@ -18,9 +18,8 @@ pipeline {
         stage('Publish Extent Report') {
             steps {
                 script {
-                    // Find the newest timestamp folder in test-reports
-                    def latestFolder = bat(
-                        script: 'powershell -command "(Get-ChildItem -Directory test-reports | Sort-Object LastWriteTime -Descending | Select-Object -First 1).FullName"',
+                    def latestFolder = powershell(
+                        script: '(Get-ChildItem -Directory "test-reports" | Sort-Object LastWriteTime -Descending | Select-Object -First 1).FullName',
                         returnStdout: true
                     ).trim()
 
@@ -30,9 +29,9 @@ pipeline {
                         reportDir: latestFolder,
                         reportFiles: 'automation-execution-report.html',
                         reportName: 'Extent Report',
-                        allowMissing: false,
+                        keepAll: true,
                         alwaysLinkToLastBuild: true,
-                        keepAll: true
+                        allowMissing: false
                     ])
                 }
             }
