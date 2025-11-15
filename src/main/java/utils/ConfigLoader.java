@@ -131,7 +131,7 @@ public class ConfigLoader {
 	}
 
 	public String getUsername() {
-		String prop = properties.getProperty("sauceLabs_username", "shahidhussain");
+		String prop = properties.getProperty("sauceLabs_username", "oauth-gaffarshaikh07-e1de3");
 		if (prop != null)
 			return prop;
 		else
@@ -139,7 +139,7 @@ public class ConfigLoader {
 	}
 
 	public String getAccessKey() {
-		String prop = properties.getProperty("sauceLabs_accessKey", "d564f03a-6a2d-4e95-acda-551772352b3d");
+		String prop = properties.getProperty("sauceLabs_accessKey", "6d319774-e777-4770-991e-58004d3b277a");
 		if (prop != null)
 			return prop;
 		else

@@ -39,7 +39,7 @@ public class DriverFactory {
 		String browserName = System.getProperty("browserName", loader.getBrowser());
 		String browserVersion = System.getProperty("browserVersion", loader.getProperty("browserVersion"));
 		switch (executionEnv) {
-			case "BrowserStack":
+			case "SauceLab":
 				URL url;
 
 				String SAUCE_REMOTE_URL = "https://" + loader.getUsername() + ":" + loader.getAccessKey()
@@ -103,7 +103,7 @@ public class DriverFactory {
 
 					// Adding cpabilities to ChromeOptions
 					ChromeOptions options = new ChromeOptions();
-					options.addArguments("--headless=new"); 
+					//options.addArguments("--headless=new"); 
 					options.setExperimentalOption("prefs", prefs);
 					
 					// options.setHeadless(true);
@@ -152,7 +152,7 @@ public class DriverFactory {
 			String executionEnv = System.getProperty("executionEnv", loader.getProperty("executionEnv"));
 			String app = ConfigLoader.TEST_APP_NAME;
 			switch (executionEnv) {
-				case "SauceLabs": {
+				case "SauceLab": {
 					URL url;
 
 					String SAUCE_REMOTE_URL = "https://" + loader.getUsername() + ":" + loader.getAccessKey()
