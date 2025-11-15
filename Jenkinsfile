@@ -20,17 +20,17 @@ pipeline {
             }
         }
 
-        stage('Run Cucumber') {
+        stage('Run Cucumber Tests') {
             steps {
-                sh 'mvn test'
+                sh 'mvn test -Dcucumber.filter.tags="@Smoke"'
             }
         }
 
         stage('Publish Cucumber Report') {
             steps {
                 publishHTML([
-                    reportDir: 'target',
-                    reportFiles: 'cucumber-html-reports/overview-features.html',
+                    reportDir: 'target/cucumber-html-reports',
+                    reportFiles: 'overview-features.html',
                     reportName: 'Cucumber Report'
                 ])
             }
@@ -38,11 +38,21 @@ pipeline {
 
         stage('Publish Extent Report') {
             steps {
-                publishHTML([
-                    reportDir: 'test-output/ExtentReports',
-                    reportFiles: 'index.html',
-                    reportName: 'Extent Report'
-                ])
+                script {
+                    // find the latest timestamped report folder
+                    def latestFolder = sh(
+                        script: "ls -td test-reports/*/ | head -1",
+                        returnStdout: true
+                    ).trim()
+
+                    echo "Latest Extent Report Folder: ${latestFolder}"
+
+                    publishHTML([
+                        reportDir: latestFolder,
+                        reportFiles: 'automation-execution-report.html',
+                        reportName: 'Extent Report'
+                    ])
+                }
             }
         }
     }
