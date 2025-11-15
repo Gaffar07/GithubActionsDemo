@@ -14,22 +14,22 @@ pipeline {
             }
         }
 
-        stage('Publish Latest Extent Report') {
-            steps {
-                script {
-                    def latestReportDir = bat(
-                        script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
-                        returnStdout: true
-                    ).trim().split('\r\n')[0]
+      stage('Publish Latest Extent Report') {
+    steps {
+        script {
+            def latestReportDir = bat(
+                script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
+                returnStdout: true
+            ).trim().split('\r\n')[0]
 
-                    publishHTML([
-                        reportDir: latestReportDir,
-                        reportFiles: 'automation-execution-report.html',
-                        reportName: 'Extent Automation Report'
-                    ])
-                }
-            }
+            publishHTML([
+                reportDir: latestReportDir,
+                reportFiles: 'automation-execution-report.html',
+                reportName: 'Extent Automation Report'
+            ])
         }
+    }
+}
     }
 
     post {
