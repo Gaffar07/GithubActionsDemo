@@ -15,7 +15,7 @@ pipeline {
 
                     // Get latest test-reports folder
                     def reportFolder = bat(
-                        script: 'for /f "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%i & exit /b',
+                        script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
                         returnStdout: true
                     ).trim()
 
