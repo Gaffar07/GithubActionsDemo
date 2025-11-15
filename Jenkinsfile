@@ -1,11 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        // REMOVE this line if Jenkins does not have JDK17 configured
-        jdk 'JDK17'
-        maven 'MAVEN3'
-    }
+    
 
     stages {
 
