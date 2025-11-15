@@ -7,13 +7,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage('Run Cucumber Tests') {
             steps {
-                sh 'mvn test -Dcucumber.filter.tags="@Hero"'
+                bat 'mvn test -Dcucumber.filter.tags="@Hero"'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
         stage('Publish Extent Report') {
             steps {
                 script {
-                    def latestFolder = sh(
+                    def latestFolder = bat(
                         script: "ls -td test-reports/*/ | head -1",
                         returnStdout: true
                     ).trim()
