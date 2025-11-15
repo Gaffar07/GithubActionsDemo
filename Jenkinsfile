@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        // Optional: Set any environment variables here
         MAVEN_OPTS = "-Xms256m -Xmx1024m"
     }
 
@@ -27,8 +26,15 @@ pipeline {
         stage('Publish Report') {
             steps {
                 script {
-                    // Fixed path for Extent Report
-                    def reportPath = "target/extent-report/automation-execution-report.html"
+                    // Detect the latest timestamped folder under test-reports
+                    def latestFolder = bat(
+                        script: 'for /f "tokens=*" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & exit', 
+                        returnStdout: true
+                    ).trim()
+
+                    echo "Latest report folder detected: ${latestFolder}"
+
+                    def reportPath = "test-reports\\${latestFolder}\\automation-execution-report.html"
 
                     if (fileExists(reportPath)) {
                         echo "Publishing HTML report: ${reportPath}"
@@ -36,7 +42,7 @@ pipeline {
                             allowMissing: false,
                             alwaysLinkToLastBuild: true,
                             keepAll: true,
-                            reportDir: 'target/extent-report',
+                            reportDir: "test-reports\\${latestFolder}",
                             reportFiles: 'automation-execution-report.html',
                             reportName: "Automation Execution Report"
                         ])
