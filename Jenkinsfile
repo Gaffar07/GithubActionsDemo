@@ -5,12 +5,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/YOUR_USER/YOUR_REPO.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean install -DskipTests'
