@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Cucumber Tests') {
             steps {
-                sh 'mvn test -Dcucumber.filter.tags="@Smoke"'
+                sh 'mvn test -Dcucumber.filter.tags="@Hero"'
             }
         }
 
