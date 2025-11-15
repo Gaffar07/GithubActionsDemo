@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build & Test (Smoke Only)') {
             steps {
-                bat "mvn clean test -Dcucumber.filter.tags='@Smoke' -Dmaven.test.failure.ignore=true"
+                bat "mvn clean test -Dcucumber.filter.tags='@Hero' -Dmaven.test.failure.ignore=true"
             }
         }
 
