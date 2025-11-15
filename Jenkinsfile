@@ -64,29 +64,47 @@ pipeline {
             }
         }
 
-     stage('Send Cucumber HTML Report via Email') {
-    when {
-        expression { latestReport != null }
-    }
+     stage('Send Latest Cucumber HTML Report via Email') {
     steps {
         script {
-            def reportPath = "test-reports/${latestReport}/automation-execution-report.html"
-            echo "Sending report via email: ${reportPath}"
+            // Detect latest report folder dynamically
+            def latestReport = ''
+            if (isUnix()) {
+                // Linux / macOS
+                latestReport = sh(
+                    script: "ls -td test-reports/*/ 2>/dev/null | head -1",
+                    returnStdout: true
+                ).trim()
+            } else {
+                // Windows
+                latestReport = bat(
+                    script: 'for /F "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & goto :done',
+                    returnStdout: true
+                ).trim()
+            }
 
-            // Make sure Email Extension Plugin is installed in Jenkins
-            emailext(
-                subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: """
-                    <p>Hello Team,</p>
-                    <p>The latest Cucumber test execution report is attached.</p>
-                    <p>Job: ${env.JOB_NAME} <br/>
-                    Build Number: ${env.BUILD_NUMBER} <br/>
-                    Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                """,
-                recipientProviders: [[$class: 'DevelopersRecipientProvider']], // can replace with 'RequesterRecipientProvider' or direct emails
-                attachmentsPattern: reportPath,
-                mimeType: 'text/html'
-            )
+            if (!latestReport) {
+                echo "No report folder found. Skipping email."
+            } else {
+                // Construct full path to HTML report
+                def reportPath = "${latestReport}/automation-execution-report.html"
+                echo "Sending report via email: ${reportPath}"
+
+                // Send email with Email Extension Plugin
+                emailext(
+                    subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: """
+                        <p>Hello Team,</p>
+                        <p>The latest Cucumber test execution report is attached.</p>
+                        <p>Job: ${env.JOB_NAME} <br/>
+                        Build Number: ${env.BUILD_NUMBER} <br/>
+                        Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                    """,
+                    to: "gaffarshaikh07@gmail.com",   // Replace/add recipients here
+                    attachmentsPattern: reportPath,
+                    mimeType: 'text/html'
+                )
+            }
         }
     }
 }
