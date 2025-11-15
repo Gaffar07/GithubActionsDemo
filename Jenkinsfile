@@ -1,8 +1,6 @@
 pipeline {
     agent any
 
-    
-
     stages {
 
         stage('Build') {
@@ -13,28 +11,16 @@ pipeline {
 
         stage('Run Cucumber Tests') {
             steps {
-                bat 'mvn test -Dcucumber.filter.tags="@Hero"'
-            }
-        }
-
-        stage('Publish Cucumber Report') {
-            steps {
-                publishHTML(target: [
-                    reportDir: 'target/cucumber-html-reports',
-                    reportFiles: 'overview-features.html',
-                    reportName: 'Cucumber Report',
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true
-                ])
+                bat 'mvn test -Dcucumber.filter.tags="@smoke"'
             }
         }
 
         stage('Publish Extent Report') {
             steps {
                 script {
+                    // Find the newest timestamp folder in test-reports
                     def latestFolder = bat(
-                        script: "ls -td test-reports/*/ | head -1",
+                        script: 'powershell -command "(Get-ChildItem -Directory test-reports | Sort-Object LastWriteTime -Descending | Select-Object -First 1).FullName"',
                         returnStdout: true
                     ).trim()
 
@@ -44,7 +30,7 @@ pipeline {
                         reportDir: latestFolder,
                         reportFiles: 'automation-execution-report.html',
                         reportName: 'Extent Report',
-                        allowMissing: true,
+                        allowMissing: false,
                         alwaysLinkToLastBuild: true,
                         keepAll: true
                     ])
