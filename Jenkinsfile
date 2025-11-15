@@ -64,17 +64,32 @@ pipeline {
             }
         }
 
-        stage('Upload Cucumber HTML Report') {
-            when {
-                expression { latestReport != null }
-            }
-            steps {
-               echo "Archiving report from: test-reports/${latestReport}/**/*"
-            archiveArtifacts artifacts: "test-reports/${latestReport}/**/*", allowEmptyArchive: true
-            }
-        }
-
+     stage('Send Cucumber HTML Report via Email') {
+    when {
+        expression { latestReport != null }
     }
+    steps {
+        script {
+            def reportPath = "test-reports/${latestReport}/automation-execution-report.html"
+            echo "Sending report via email: ${reportPath}"
+
+            // Make sure Email Extension Plugin is installed in Jenkins
+            emailext(
+                subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                    <p>Hello Team,</p>
+                    <p>The latest Cucumber test execution report is attached.</p>
+                    <p>Job: ${env.JOB_NAME} <br/>
+                    Build Number: ${env.BUILD_NUMBER} <br/>
+                    Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                """,
+                recipientProviders: [[$class: 'DevelopersRecipientProvider']], // can replace with 'RequesterRecipientProvider' or direct emails
+                attachmentsPattern: reportPath,
+                mimeType: 'text/html'
+            )
+        }
+    }
+}
 
     post {
         always {
