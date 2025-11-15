@@ -2,67 +2,83 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_OPTS = "-Xms256m -Xmx1024m"
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17" // Adjust if needed
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
     }
 
     stages {
-        stage('Checkout SCM') {
+
+        stage('Checkout Code') {
             steps {
-                checkout scm
+                echo 'Checking out code from Git...'
+                checkout([$class: 'GitSCM', 
+                    branches: [[name: '*/main']], 
+                    userRemoteConfigs: [[url: 'https://github.com/Gaffar07/GithubActionsDemo.git']]
+                ])
             }
         }
 
-        stage('Clean Latest Report') {
+        stage('Set up JDK 17') {
             steps {
-                echo "Cleaning latest report folder..."
-                bat 'rmdir /s /q test-reports\\latest || echo Folder not found'
+                echo 'Using JDK 17...'
+                bat 'java -version'
             }
         }
 
-        stage('Build & Test (Smoke Only)') {
+        stage('Clean, Build & Run Smoke Tests') {
             steps {
-                echo "Running Cucumber tests with tag @Hero..."
-                bat """
-                    mvn clean test ^
-                    -Dcucumber.filter.tags='@Hero' ^
-                    -Dmaven.test.failure.ignore=true
-                """
+                echo 'Running Maven clean, install and Cucumber tests...'
+                bat '''
+                    mvn clean install -U -DskipTests
+                    mvn test -Dcucumber.filter.tags="@Hero"
+                '''
             }
         }
 
-        stage('Archive Reports') {
+        stage('Find Latest Report Folder') {
             steps {
                 script {
-                    def timestamp = new Date().format("dd-MMM-yy_HH-mm-ss")
-                    def latestDir = "test-reports/latest"
-                    def archivedDir = "test-reports/${timestamp}"
+                    echo 'Finding latest test report folder...'
+                    latestReport = bat(
+                        script: '''
+                            @echo off
+                            setlocal enabledelayedexpansion
+                            set latest=
+                            for /f "tokens=*" %%i in ('dir /b /ad /o-d test-reports') do (
+                                set latest=%%i
+                                goto done
+                            )
+                            :done
+                            echo !latest!
+                        ''',
+                        returnStdout: true
+                    ).trim()
 
-                    echo "Archiving latest report to: ${archivedDir}"
-                    bat "xcopy /E /I /Y \"${latestDir}\" \"${archivedDir}\""
-
-                    publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: latestDir,
-                        reportFiles: 'automation-execution-report.html',
-                        reportName: "Automation Execution Report"
-                    ])
-
-                    archiveArtifacts artifacts: 'test-reports/**', allowEmptyArchive: true
+                    if (latestReport == "") {
+                        echo "No report folder found."
+                        latestReport = null
+                    } else {
+                        echo "Latest report folder: ${latestReport}"
+                    }
                 }
             }
         }
+
+        stage('Upload Cucumber HTML Report') {
+            when {
+                expression { latestReport != null }
+            }
+            steps {
+                echo "Archiving report folder: test-reports\\${latestReport}"
+                archiveArtifacts artifacts: "test-reports\\${latestReport}\\**/*", allowEmptyArchive: true
+            }
+        }
+
     }
 
     post {
         always {
-            echo "Archiving surefire XML reports..."
-            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
-        }
-
-        failure {
-            echo "Build failed! Check logs and report for details."
+            echo 'Pipeline finished!'
         }
     }
 }
