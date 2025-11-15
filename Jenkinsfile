@@ -1,46 +1,59 @@
 pipeline {
     agent any
 
-   
+    environment {
+        MAVEN_OPTS = "-Xms256m -Xmx1024m"
+    }
 
     stages {
-
-        stage('Checkout') {
+        stage('Checkout SCM') {
             steps {
                 checkout scm
             }
         }
 
-        stage('Build & Test') {
+        stage('Build & Test (Smoke Only)') {
             steps {
-                sh "mvn clean test -Dcucumber.filter.tags='@Hero' -Dmaven.test.failure.ignore=true"
+                echo "Running Cucumber tests with tag @Hero..."
+                bat """
+                    mvn clean test ^
+                    -Dcucumber.filter.tags='@Hero' ^
+                    -Dmaven.test.failure.ignore=true
+                """
             }
         }
 
         stage('Publish Report') {
             steps {
                 script {
-                    // Find the latest timestamp folder inside test-reports
-                    def reportFolder = sh(
-                        script: "ls -td test-reports/*/ | head -1",
+                    // Detect latest timestamped folder under test-reports (Windows)
+                    def latestFolder = bat(
+                        script: '''
+                            for /f "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
+                                echo %%i
+                                goto :done
+                            )
+                            :done
+                        ''',
                         returnStdout: true
                     ).trim()
 
-                    echo "Latest Report Folder Found: ${reportFolder}"
+                    echo "Latest report folder detected: ${latestFolder}"
 
-                    // The report file inside that folder
-                    def reportFile = "${reportFolder}automation-execution-report.html"
+                    def reportPath = "test-reports\\${latestFolder}\\automation-execution-report.html"
 
-                    if (fileExists(reportFile)) {
+                    if (fileExists(reportPath)) {
+                        echo "Publishing HTML report: ${reportPath}"
                         publishHTML([
-                            reportDir: reportFolder,
-                            reportFiles: 'automation-execution-report.html',
-                            reportName: 'Automation Execution Report',
+                            allowMissing: false,
                             alwaysLinkToLastBuild: true,
-                            keepAll: true
+                            keepAll: true,
+                            reportDir: "test-reports\\${latestFolder}",
+                            reportFiles: 'automation-execution-report.html',
+                            reportName: "Automation Execution Report"
                         ])
                     } else {
-                        error "Report file not found: ${reportFile}"
+                        error "❌ Report not found at: ${reportPath}"
                     }
                 }
             }
@@ -49,11 +62,12 @@ pipeline {
 
     post {
         always {
-            // Archive the whole test-reports folder for download
-            archiveArtifacts artifacts: 'test-reports/**/*.*', allowEmptyArchive: true
+            echo "Archiving test results..."
+            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
         }
-        unsuccessful {
-            echo "Build failed or tests failed."
+
+        failure {
+            echo "Build failed! Check logs and report for details."
         }
     }
 }
