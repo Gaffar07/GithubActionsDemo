@@ -12,6 +12,13 @@ pipeline {
             }
         }
 
+        stage('Clean Latest Report') {
+            steps {
+                echo "Cleaning latest report folder..."
+                bat 'rmdir /s /q test-reports\\latest || echo Folder not found'
+            }
+        }
+
         stage('Build & Test (Smoke Only)') {
             steps {
                 echo "Running Cucumber tests with tag @Hero..."
@@ -23,38 +30,26 @@ pipeline {
             }
         }
 
-        stage('Publish Report') {
+        stage('Archive Reports') {
             steps {
                 script {
-                    // Detect latest timestamped folder under test-reports (Windows)
-                    def latestFolder = bat(
-                        script: '''
-                            for /f "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
-                                echo %%i
-                                goto :done
-                            )
-                            :done
-                        ''',
-                        returnStdout: true
-                    ).trim()
+                    def timestamp = new Date().format("dd-MMM-yy_HH-mm-ss")
+                    def latestDir = "test-reports/latest"
+                    def archivedDir = "test-reports/${timestamp}"
 
-                    echo "Latest report folder detected: ${latestFolder}"
+                    echo "Archiving latest report to: ${archivedDir}"
+                    bat "xcopy /E /I /Y \"${latestDir}\" \"${archivedDir}\""
 
-                    def reportPath = "test-reports\\${latestFolder}\\automation-execution-report.html"
+                    publishHTML([
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: latestDir,
+                        reportFiles: 'automation-execution-report.html',
+                        reportName: "Automation Execution Report"
+                    ])
 
-                    if (fileExists(reportPath)) {
-                        echo "Publishing HTML report: ${reportPath}"
-                        publishHTML([
-                            allowMissing: false,
-                            alwaysLinkToLastBuild: true,
-                            keepAll: true,
-                            reportDir: "test-reports\\${latestFolder}",
-                            reportFiles: 'automation-execution-report.html',
-                            reportName: "Automation Execution Report"
-                        ])
-                    } else {
-                        error "❌ Report not found at: ${reportPath}"
-                    }
+                    archiveArtifacts artifacts: 'test-reports/**', allowEmptyArchive: true
                 }
             }
         }
@@ -62,7 +57,7 @@ pipeline {
 
     post {
         always {
-            echo "Archiving test results..."
+            echo "Archiving surefire XML reports..."
             archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
         }
 
