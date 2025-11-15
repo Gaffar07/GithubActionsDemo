@@ -37,60 +37,46 @@ pipeline {
             }
         }
 
-        stage('Detect Latest Report Folder') {
-            steps {
-                script {
-                    def latestReport = ''
-                    if (isUnix()) {
-                        latestReport = sh(
-                            script: "ls -td ${BASE_REPORT_FOLDER}/*/ 2>/dev/null | head -1",
-                            returnStdout: true
-                        ).trim()
-                    } else {
-                        latestReport = bat(
-                            script: 'for /F "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo %i & goto :done',
-                            returnStdout: true
-                        ).trim()
-                    }
+       stage('Detect Latest Report Folder') {
+    steps {
+        script {
+            echo "Detecting latest report folder..."
+            // Windows batch version
+            def latestReport = bat(script: """
+                @echo off
+                setlocal enabledelayedexpansion
+                set latest=
+                for /F "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
+                    set latest=%%i
+                    goto :done
+                )
+                :done
+                echo !latest!
+            """, returnStdout: true).trim()
 
-                    if (!latestReport) {
-                        echo "No report folder found."
-                        currentBuild.description = "No report generated"
-                        env.LATEST_REPORT = ''
-                    } else {
-                        echo "Latest report folder detected: ${latestReport}"
-                        env.LATEST_REPORT = latestReport
-                    }
-                }
+            if (latestReport) {
+                echo "Latest report folder: ${latestReport}"
+                env.LATEST_REPORT = latestReport
+            } else {
+                echo "No report folder found"
             }
         }
-
-        stage('Send Latest Report via Email') {
-            when {
-                expression { env.LATEST_REPORT != '' }
-            }
-            steps {
-                script {
-                    def reportPath = "${env.LATEST_REPORT}/automation-execution-report.html"
-                    echo "Sending report via email: ${reportPath}"
-
-                    emailext(
-                        subject: "Cucumber Test Report - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                        body: """
-                            <p>Hello Team,</p>
-                            <p>The latest Cucumber test execution report is attached.</p>
-                            <p>Job: ${env.JOB_NAME} <br/>
-                            Build Number: ${env.BUILD_NUMBER} <br/>
-                            Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                        """,
-                        to: "gaffarshaikh07@gmail.com",
-                        attachmentsPattern: reportPath,
-                        mimeType: 'text/html'
-                    )
-                }
-            }
-        }
-
+    }
+}
+       stage('Send Latest Report via Email') {
+    when {
+        expression { env.LATEST_REPORT != null }
+    }
+    steps {
+        emailext (
+            subject: "Cucumber Test Report",
+            body: "Please find the attached latest Cucumber HTML report.",
+            to: "gaffarshaikh07@gmail.com",
+            attachmentsPattern: "test-reports\\${env.LATEST_REPORT}\\**\\automation-execution-report.html",
+            mimeType: 'text/html'
+        )
+    }
+}
     } // end stages
 
     post {
