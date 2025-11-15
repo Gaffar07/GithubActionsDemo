@@ -33,13 +33,36 @@ pipeline {
         stage('Archive Reports') {
             steps {
                 script {
-                    // Generate timestamp
                     def timestamp = new Date().format("dd-MMM-yy_HH-mm-ss")
                     def latestDir = "test-reports/latest"
                     def archivedDir = "test-reports/${timestamp}"
 
-                    // Copy latest report to timestamped folder
                     echo "Archiving latest report to: ${archivedDir}"
                     bat "xcopy /E /I /Y \"${latestDir}\" \"${archivedDir}\""
 
-                    // Publish latest report in Jenkins
+                    publishHTML([
+                        allowMissing: false,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: latestDir,
+                        reportFiles: 'automation-execution-report.html',
+                        reportName: "Automation Execution Report"
+                    ])
+
+                    archiveArtifacts artifacts: 'test-reports/**', allowEmptyArchive: true
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo "Archiving surefire XML reports..."
+            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
+        }
+
+        failure {
+            echo "Build failed! Check logs and report for details."
+        }
+    }
+}
