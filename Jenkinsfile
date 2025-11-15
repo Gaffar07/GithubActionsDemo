@@ -13,18 +13,19 @@ pipeline {
             }
         }
 
-        stage('Clean Latest Report') {
-            steps {
-                script {
-                    echo "Cleaning latest report folder..."
-                    if (isUnix()) {
-                        sh "rm -rf ${BASE_REPORT_FOLDER}/latest || true"
-                    } else {
-                        bat "rmdir /s /q ${BASE_REPORT_FOLDER}\\latest || echo Folder not found"
-                    }
-                }
+       stage('Clean Latest Report') {
+    steps {
+        script {
+            echo "Cleaning latest report folder..."
+            if (isUnix()) {
+                sh "rm -rf ${BASE_REPORT_FOLDER}/latest || true"
+            } else {
+                // the '|| exit 0' ensures the command always succeeds
+                bat "rmdir /s /q ${BASE_REPORT_FOLDER}\\latest || exit 0"
             }
         }
+    }
+}
 
         stage('Build & Run Cucumber Tests') {
             steps {
