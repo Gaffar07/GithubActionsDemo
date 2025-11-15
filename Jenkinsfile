@@ -19,9 +19,9 @@ pipeline {
                 script {
                     // Find the most recent timestamped folder using Windows dir
                     def latestReportDir = bat(
-                        script: 'for /f "delims=" %i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%i & exit /b',
-                        returnStdout: true
-                    ).trim()
+    					script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
+    					returnStdout: true
+					).trim()
 
                     publishHTML([
                         reportDir: latestReportDir,
