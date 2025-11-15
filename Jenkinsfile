@@ -26,8 +26,8 @@ pipeline {
         stage('Publish Report') {
             steps {
                 script {
-                    // Detect latest timestamped folder under test-reports (Windows)
-                    def latestFolder = bat(
+                    // Run batch command to get the latest timestamped folder
+                    def latestFolderRaw = bat(
                         script: '''
                             for /f "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
                                 echo %%i
@@ -38,10 +38,15 @@ pipeline {
                         returnStdout: true
                     ).trim()
 
+                    // Keep only the last non-empty line (the actual folder name)
+                    def latestFolder = latestFolderRaw.readLines().findAll { it?.trim() }[-1].trim()
+
                     echo "Latest report folder detected: ${latestFolder}"
 
+                    // Full path to HTML report
                     def reportPath = "test-reports\\${latestFolder}\\automation-execution-report.html"
 
+                    // Publish HTML report
                     if (fileExists(reportPath)) {
                         echo "Publishing HTML report: ${reportPath}"
                         publishHTML([
@@ -55,6 +60,9 @@ pipeline {
                     } else {
                         error "❌ Report not found at: ${reportPath}"
                     }
+
+                    // Archive entire report folder for download
+                    archiveArtifacts artifacts: "test-reports\\${latestFolder}\\**", allowEmptyArchive: true
                 }
             }
         }
@@ -62,7 +70,7 @@ pipeline {
 
     post {
         always {
-            echo "Archiving test results..."
+            echo "Archiving test results from surefire..."
             archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
         }
 
