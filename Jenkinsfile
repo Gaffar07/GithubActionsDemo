@@ -7,14 +7,6 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
-        
-        stage('Clean Old Reports') {
-    		steps {
-        			bat 'echo Deleting old reports...'
-        			bat 'rmdir /s /q test-reports 2>nul || exit 0'
-        			bat 'rmdir /s /q target 2>nul || exit 0'
-    }
-}
 
         stage('Build & Test') {
             steps {
