@@ -21,16 +21,19 @@ pipeline {
             }
         }
 
-        stage('Publish Extent Report') {
-            steps {
-                publishHTML([
-                    reportDir: 'test-reports',
-                    reportFiles: 'ExtentReport.html',
-                    reportName: 'Extent Automation Report'
-                ])
-            }
-        }
+       stage('Publish Extent Report') {
+    steps {
+        publishHTML([
+            reportDir: 'test-reports',
+            reportFiles: 'ExtentReport.html',
+            reportName: 'Extent Automation Report',
+            allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true
+        ])
     }
+}
+
 
     post {
         always {
