@@ -1,17 +1,6 @@
 pipeline {
   agent any
 
-  options {
-    // Keep console readable and fail fast on step errors
-    ansiColor('xterm')
-    timestamps()
-    disableConcurrentBuilds()
-  }
-
-  environment {
-    // Optional: pass build number to tests if you later use it in reports
-    BUILD_NUMBER_SAFE = "${env.BUILD_NUMBER}"
-  }
 
   stages {
     stage('Checkout') {
