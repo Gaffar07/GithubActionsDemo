@@ -7,6 +7,8 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
+        
+        
 
         stage('Build & Test') {
             steps {
@@ -15,12 +17,12 @@ pipeline {
         }
 
       stage('Publish Latest Extent Report') {
-    script {
-        bat '''
-        for /F "delims=" %i in ('dir /b /ad /o-d test-reports') do @echo test-reports\\%i   & exit /b 
-        '''
-    }
-}
+    steps {
+        script {
+           def latestReportDir = bat(
+    			script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
+    			returnStdout: true
+		    ).trim().tokenize('\r\n').last()
 
 
             publishHTML([
