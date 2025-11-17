@@ -85,7 +85,7 @@ pipeline {
   always {
 
     // Archive all Extent reports and PDFs
-    archiveArtifacts artifacts: 'test-reports/**/*.*', onlyIfSuccessful: false, fingerprint: true
+    archiveArtifacts artifacts: 'test-reports/archieves/automation-execution-report.html', onlyIfSuccessful: false, fingerprint: true
 
     // Show workspace status for debugging
     bat 'dir /ad /o-d'
