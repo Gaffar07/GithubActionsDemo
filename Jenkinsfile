@@ -16,24 +16,36 @@ pipeline {
             }
         }
 
-      stage('Publish Latest Extent Report') {
+     stage('Publish Latest Extent Report') {
     steps {
         script {
-           def latestReportDir = bat(
-    			script: 'for /f "delims=" %%i in (\'dir /b /ad /o-d test-reports\') do @echo test-reports\\%%i & exit /b',
-    			returnStdout: true
-		    ).trim().tokenize('\r\n').last()
+            def latestReportDir = bat(
+                script: '''
+                @echo off
+                set "latestFolder="
+                for /f "delims=" %%i in ('dir /b /ad /o-d test-reports') do (
+                    set "latestFolder=%%i"
+                    goto :found
+                )
+                :found
+                if defined latestFolder (
+                    echo test-reports\\%latestFolder%
+                ) else (
+                    echo No report folder found
+                )
+                exit /b 0
+                ''',
+                returnStdout: true
+            ).trim()
 
+            echo "Latest Extent Report Folder: ${latestReportDir}"
 
-            publishHTML([
-                reportDir: latestReportDir,
-                reportFiles: 'automation-execution-report.html',
-                reportName: 'Extent Automation Report'
-            ])
+            // Optional: archive the report
+            archiveArtifacts artifacts: "${latestReportDir}/**/*.*", fingerprint: true
         }
     }
 }
-    }
+
 
     post {
         always {
