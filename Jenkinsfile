@@ -83,8 +83,6 @@ pipeline {
 
   post {
   always {
-    // Archive cucumber JSON if it exists (wildcard to catch variations)
-    archiveArtifacts artifacts: '**/cucumber*.json', onlyIfSuccessful: false, fingerprint: true
 
     // Archive all Extent reports and PDFs
     archiveArtifacts artifacts: 'test-reports/**/*.*', onlyIfSuccessful: false, fingerprint: true
