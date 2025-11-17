@@ -82,20 +82,24 @@ pipeline {
   }
 
   post {
-    always {
-      // Archive cucumber.json and any generated HTML/PDF directly under test-reports
-      archiveArtifacts artifacts: 'target/cucumber.json', onlyIfSuccessful: false, fingerprint: true
-      archiveArtifacts artifacts: 'test-reports/**/*.*', onlyIfSuccessful: false, fingerprint: true
+  always {
+    // Archive cucumber JSON if it exists (wildcard to catch variations)
+    archiveArtifacts artifacts: '**/cucumber*.json', onlyIfSuccessful: false, fingerprint: true
 
-      // Show workspace status for debugging
-      bat 'dir /ad /o-d'
-      bat 'dir test-reports'
-    }
-    success {
-      echo 'Pipeline finished successfully.'
-    }
-    failure {
-      echo 'Pipeline failed — check console logs and the Publish stage output.'
-    }
+    // Archive all Extent reports and PDFs
+    archiveArtifacts artifacts: 'test-reports/**/*.*', onlyIfSuccessful: false, fingerprint: true
+
+    // Show workspace status for debugging
+    bat 'dir /ad /o-d'
+    bat 'dir /s /b test-reports'
+    bat 'dir /s /b target'
   }
+  success {
+    echo 'Pipeline finished successfully.'
+  }
+  failure {
+    echo 'Pipeline failed — check console logs and the Publish stage output.'
+  }
+}
+
 }
