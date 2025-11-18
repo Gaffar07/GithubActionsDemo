@@ -9,17 +9,6 @@ pipeline {
       }
     }
 
-    stage('Clean old reports') {
-      steps {
-        bat '''
-        @echo off
-        echo Deleting old reports...
-        rmdir /s /q test-reports 2>nul || echo No test-reports folder to delete
-        rmdir /s /q target 2>nul || echo No target folder to delete
-        mkdir test-reports
-        '''
-      }
-    }
 
     stage('Build & Test') {
       steps {
