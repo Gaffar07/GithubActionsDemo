@@ -48,10 +48,13 @@ pipeline {
     }
   }
 
-  post {
+ post {
   always {
-    archiveArtifacts artifacts: 'target/extent-reports/*.html', allowEmptyArchive: true
+    // Archive Extent report into the build folder
+    archiveArtifacts artifacts: 'test-reports/ExtentReport.html', allowEmptyArchive: true
+    archiveArtifacts artifacts: '**/*.html', allowEmptyArchive: true
   }
 }
+
 
 }
