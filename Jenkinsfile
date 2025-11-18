@@ -17,8 +17,7 @@ pipeline {
         mvn clean test ^
           -Dcucumber.filter.tags="@Hero" ^
           -Dcucumber.plugin="json:target/cucumber.json" ^
-          -Dextent.reporter.html.start=true ^
-          -Dextent.reporter.html.out=test-reports/ExtentReport.html
+        
         '''
       }
     }
@@ -26,9 +25,9 @@ pipeline {
     stage('Publish Extent Report') {
       steps {
         script {
-          if (fileExists('test-reports/ExtentReport.html')) {
+          if (fileExists('test-reports/automation-execution-report.html')) {
             echo "Found Extent Report"
-            archiveArtifacts artifacts: 'test-reports/ExtentReport.html', fingerprint: true
+            archiveArtifacts artifacts: 'test-reports/automation-execution-report.html', fingerprint: true
           } else {
             echo "No Extent Report found"
           }
