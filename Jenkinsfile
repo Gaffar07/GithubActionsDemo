@@ -38,7 +38,7 @@ pipeline {
 
  post {
   always {
-    archiveArtifacts artifacts: 'test-reports/automation-execution-report.html,target/extent-reports/*.html', allowEmptyArchive: true
+    archiveArtifacts artifacts: 'test-reports/*.html,target/extent-reports/*.html', allowEmptyArchive: true
   }
 }
 
