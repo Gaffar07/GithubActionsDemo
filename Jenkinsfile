@@ -49,8 +49,9 @@ pipeline {
   }
 
   post {
-    always {
-      archiveArtifacts artifacts: '**/*.html', allowEmptyArchive: true
-    }
+  always {
+    archiveArtifacts artifacts: 'target/extent-reports/*.html', allowEmptyArchive: true
   }
+}
+
 }
