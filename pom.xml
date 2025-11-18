@@ -217,7 +217,7 @@
       </property>
     </properties>
     <includes>
-      <include>**/*WebRnner.java</include>
+      <include>**/*WebRunner.java</include>
     </includes>
     <testFailureIgnore>${failureignore}</testFailureIgnore>
   </configuration>
