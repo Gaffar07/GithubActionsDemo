@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue= {"Hooks","webStepDef"},
 		tags="@Hero",
 		plugin = {
-				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				  "pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				  "json:target/cucumber.json",
 				  "timeline:test-output-timelines/",
 				  "rerun:target/rerun.txt"
