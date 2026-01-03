@@ -12356,3 +12356,412 @@ java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" 
 22:32:56.042 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
 22:32:56.043 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
 22:32:56.044 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:31.156 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+20:43:31.445 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\gaffa\.browserstack already exist
+20:43:31.449 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\gaffa\.browserstack\cli\binary-win-x64.exe
+20:43:32.546 [main] ERROR com.browserstack.v2.SdkCliUtils - Error in setting up cli path directory, Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(Unknown Source)
+	at com.browserstack.v2.SdkCLI.<clinit>(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.measure(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.end(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.a(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.onStart(Unknown Source)
+	at org.testng.SuiteRunner.invokeListeners(SuiteRunner.java:241)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:302)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+20:43:32.561 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+20:43:33.790 [TestNG-PoolService-4] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 26
+20:43:33.791 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:43:33.791 [TestNG-PoolService-3] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:43:33.791 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:43:33.792 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 22
+20:43:38.278 [TestNG-PoolService-4] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 26
+20:43:38.412 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 22
+20:43:38.433 [TestNG-PoolService-3] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:43:38.587 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:43:38.666 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:43:44.915 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.915 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.915 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.915 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.915 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.916 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:43:44.920 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product:
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+	at com.browserstack.utils.FunnelInstrumentation.a(Unknown Source)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at com.browserstack.utils.FunnelInstrumentation.getProducts(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899)
+	at org.testng.TestRunner.afterRun(TestRunner.java:863)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+20:43:44.930 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Couldn't find dependency class: appium
+20:43:44.965 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TEST REPORTING AND ANALYTICS
+20:43:44.998 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"[REDACTED]","userName":"[REDACTED]","event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"4e666b21-c4f8-4e18-943a-47e6060ebcd2","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":null,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"LAPTOP-0ETEA5TC","measures":{"sdk:pre-test":0.019099712371826172},"productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"AUTO","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"serenityOverridePlugin":false,"skipSessionName":false,"skipSessionStatus":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"automationFrameworkVersion":null,"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"17.0.8","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"cucumber","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"3.141.59","automationFramework":"selenium","seleniumVersion":"null"}}
+20:43:45.285 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
+20:43:45.286 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+20:43:45.288 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:20.807 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+20:45:21.055 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\gaffa\.browserstack already exist
+20:45:21.058 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\gaffa\.browserstack\cli\binary-win-x64.exe
+20:45:21.784 [main] ERROR com.browserstack.v2.SdkCliUtils - Error in setting up cli path directory, Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(Unknown Source)
+	at com.browserstack.v2.SdkCLI.<clinit>(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.measure(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.end(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.a(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.onStart(Unknown Source)
+	at org.testng.SuiteRunner.invokeListeners(SuiteRunner.java:241)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:302)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+20:45:21.788 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+20:45:22.727 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:45:22.727 [TestNG-PoolService-3] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:45:22.728 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 22
+20:45:22.728 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:45:22.728 [TestNG-PoolService-4] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 26
+20:45:27.105 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:45:27.110 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:45:27.169 [TestNG-PoolService-4] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 26
+20:45:27.292 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 22
+20:45:27.385 [TestNG-PoolService-3] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:45:33.705 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.705 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.706 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.706 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.706 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.707 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:45:33.710 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product:
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+	at com.browserstack.utils.FunnelInstrumentation.a(Unknown Source)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at com.browserstack.utils.FunnelInstrumentation.getProducts(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899)
+	at org.testng.TestRunner.afterRun(TestRunner.java:863)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+20:45:33.719 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Couldn't find dependency class: appium
+20:45:33.757 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TEST REPORTING AND ANALYTICS
+20:45:33.789 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"[REDACTED]","userName":"[REDACTED]","event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"2715aba2-77b6-476b-96c3-0ab10a1f9c49","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":null,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"LAPTOP-0ETEA5TC","measures":{"sdk:pre-test":0.012700080871582031},"productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"AUTO","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"serenityOverridePlugin":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"automationFrameworkVersion":null,"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"17.0.8","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"cucumber","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"3.141.59","automationFramework":"selenium","seleniumVersion":"null"}}
+20:45:34.109 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
+20:45:34.110 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+20:45:34.112 [main] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 1
+20:52:48.368 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+20:52:48.621 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\gaffa\.browserstack already exist
+20:52:48.630 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\gaffa\.browserstack\cli\binary-win-x64.exe
+20:52:50.095 [main] ERROR com.browserstack.v2.SdkCliUtils - Error in setting up cli path directory, Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(Unknown Source)
+	at com.browserstack.v2.SdkCLI.<clinit>(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.measure(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.end(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.a(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.onStart(Unknown Source)
+	at org.testng.SuiteRunner.invokeListeners(SuiteRunner.java:241)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:302)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+20:52:50.097 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+20:52:51.344 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:52:51.345 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:52:51.345 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:52:55.020 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:52:55.070 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+20:52:55.117 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:52:59.787 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:52:59.801 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:53:02.144 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+20:53:02.188 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+20:53:07.681 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product:
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+	at com.browserstack.utils.FunnelInstrumentation.a(Unknown Source)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at com.browserstack.utils.FunnelInstrumentation.getProducts(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899)
+	at org.testng.TestRunner.afterRun(TestRunner.java:863)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+20:53:07.687 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Couldn't find dependency class: appium
+20:53:07.721 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TEST REPORTING AND ANALYTICS
+20:53:07.753 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"[REDACTED]","userName":"[REDACTED]","event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"4e978e81-3ec4-41a2-ba19-3264534ba26a","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":null,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"LAPTOP-0ETEA5TC","measures":{"sdk:pre-test":0.014800071716308594},"productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"AUTO","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionStatus":false,"serenityOverridePlugin":false,"skipSessionName":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"automationFrameworkVersion":null,"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"17.0.14","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"cucumber","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"3.141.59","automationFramework":"selenium","seleniumVersion":"null"}}
+20:53:08.052 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
+20:53:08.053 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+21:15:32.485 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+21:15:32.689 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\gaffa\.browserstack already exist
+21:15:32.692 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\gaffa\.browserstack\cli\binary-win-x64.exe
+21:15:33.509 [main] ERROR com.browserstack.v2.SdkCliUtils - Error in setting up cli path directory, Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(Unknown Source)
+	at com.browserstack.v2.SdkCLI.<clinit>(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.measure(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.end(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.a(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.onStart(Unknown Source)
+	at org.testng.SuiteRunner.invokeListeners(SuiteRunner.java:241)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:302)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+21:15:33.523 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+21:15:34.283 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product:
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+	at com.browserstack.utils.FunnelInstrumentation.a(Unknown Source)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at com.browserstack.utils.FunnelInstrumentation.getProducts(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899)
+	at org.testng.TestRunner.afterRun(TestRunner.java:863)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+21:15:34.286 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Couldn't find dependency class: appium
+21:15:34.331 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TEST REPORTING AND ANALYTICS
+21:15:34.377 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"[REDACTED]","userName":"[REDACTED]","event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"3521be31-4069-44c9-a278-8b41cc24dcc2","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":null,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"LAPTOP-0ETEA5TC","measures":{"sdk:pre-test":0.023200035095214844},"productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"AUTO","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"serenityOverridePlugin":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"automationFrameworkVersion":null,"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"17.0.14","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"cucumber","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"3.141.59","automationFramework":"selenium","seleniumVersion":"null"}}
+21:15:35.224 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
+21:15:35.224 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+21:22:37.004 [main] WARN  c.b.config.BrowserStackConfig - TEST REPORTING AND ANALYTICS could not be enabled because framework detected is null. We currently support frameworks testng, cucumber-testng & serenity
+21:22:37.178 [main] DEBUG com.browserstack.v2.SdkCliUtils - File C:\Users\gaffa\.browserstack already exist
+21:22:37.178 [main] DEBUG com.browserstack.v2.SdkCliUtils - Current CLI Path Found: C:\Users\gaffa\.browserstack\cli\binary-win-x64.exe
+21:22:38.012 [main] ERROR com.browserstack.v2.SdkCliUtils - Error in setting up cli path directory, Exception: Unexpected token END OF FILE at position 0.
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at browserstack.shaded.org.json.simple.parser.JSONParser.parse(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.checkAndUpdateCli(Unknown Source)
+	at com.browserstack.v2.SdkCliUtils.setupCliPath(Unknown Source)
+	at com.browserstack.v2.SdkCLI.<clinit>(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.measure(Unknown Source)
+	at com.browserstack.monitoring.PerformanceTester.end(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.a(Unknown Source)
+	at com.browserstack.testNgListeners.BrowserstackSuiteListener.onStart(Unknown Source)
+	at org.testng.SuiteRunner.invokeListeners(SuiteRunner.java:241)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:302)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+
+21:22:38.012 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json
+21:22:38.864 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+21:22:38.865 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+21:22:38.866 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+21:22:41.977 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+21:22:42.039 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+21:22:42.074 [TestNG-PoolService-1] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 24
+21:22:46.660 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+21:22:46.735 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+21:22:49.285 [TestNG-PoolService-2] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 25
+21:22:49.348 [TestNG-PoolService-0] DEBUG c.browserstack.utils.CurrentTestMap - Searching for Test Run ID for Thread: 23
+21:22:55.238 [main] DEBUG c.b.utils.FunnelInstrumentation - Error in getting Product:
+java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because the return value of "com.browserstack.config.BrowserStackConfig.getFramework()" is null
+	at com.browserstack.utils.FunnelInstrumentation.a(Unknown Source)
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632)
+	at com.browserstack.utils.FunnelInstrumentation.getProducts(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.createParamsForEvent(Unknown Source)
+	at com.browserstack.utils.FunnelInstrumentation.sendSDKEvent(Unknown Source)
+	at com.browserstack.testNgListeners.TmpSuiteListener.onFinish(Unknown Source)
+	at org.testng.TestRunner.fireEvent(TestRunner.java:899)
+	at org.testng.TestRunner.afterRun(TestRunner.java:863)
+	at org.testng.TestRunner.run(TestRunner.java:594)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+21:22:55.245 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Couldn't find dependency class: appium
+21:22:55.282 [main] DEBUG com.browserstack.testOps.UsageStats - getFormattedData: Collecting data for TEST REPORTING AND ANALYTICS
+21:22:55.327 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"[REDACTED]","userName":"[REDACTED]","event_properties":{"isPercyAutoEnabled":false,"language":"java","sdkRunId":"14852628-b418-4c4a-a703-0f107f443e30","buildIdentifier":"unknown","testhub_uuid":"","detectedAppiumVersion":"null","productMap":{"app_automate":false,"accessibility":null,"automate":true,"percy":false,"observability":false,"turboscale":false},"hostname":"LAPTOP-0ETEA5TC","measures":{"sdk:pre-test":0.010300159454345703},"productUsage":{"testObservability":{"buildHashedId":"","manuallySet":false,"enabled":false}},"browserStackConfig":{"browserstackLocal":null,"percy":false,"logLevel":"info","staticWebDriver":true,"autoDetectFramework":true,"percyCaptureMode":"AUTO","browserStackLocalOptions":null,"percyOptions":null,"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"serenityOverridePlugin":false},"platforms":null,"parallelsPerPlatform":null,"framework":null,"accessibility":false,"accessibilityOptions":{},"turboScaleOptions":{},"disableAutoCaptureLogs":true,"testObservability":true,"browserstackAutomation":true,"turboScale":false,"testObservabilityOptions":{},"gradleMConfig":null,"proxySettings":null},"automationFrameworkVersion":null,"percyBuildId":null,"product":"[automate]","buildName":"unknown","os":"Windows 11","languageVersion":"17.0.14","appiumVersion":"null","frameworkDetectionInstrumentation":{},"detectedDependencies":"cucumber","referrer":"unknown","locationTrigger":"onFinish","accessibilityConfiguration":{"pollingTimeout":30},"language_framework":"unknown","testOrchestration":{"abortBuildOnFailure":{"enabled":false},"retryTestsOnFailure":{"enabled":false},"userConfig":{}},"detectedSeleniumVersion":"3.141.59","automationFramework":"selenium","seleniumVersion":"null"}}
+21:22:55.611 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful, response: {"message":"Unauthorized"}
+21:22:55.611 [main] DEBUG c.b.monitoring.PerformanceTester - Failed to append key metrics to file D:\Gaffar\API\log\key-metrics.json

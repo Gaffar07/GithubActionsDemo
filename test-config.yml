@@ -1,4 +1,4 @@
 version:0.2
-app=WEB
+app=Web
 test_env=stg
 channel=Web
