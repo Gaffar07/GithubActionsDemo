@@ -1,6 +1,14 @@
 # Base image with Java + Maven
 FROM maven:3.9.6-eclipse-temurin-17
 
+# Get Chrome major version
+RUN CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f1) \
+    && DRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}) \
+    && wget -q "https://chromedriver.storage.googleapis.com/${DRIVER_VERSION}/chromedriver_linux64.zip" \
+    && unzip chromedriver_linux64.zip -d /usr/local/bin \
+    && rm chromedriver_linux64.zip
+
+
 # Install Chrome and dependencies
 RUN apt-get update && apt-get install -y wget gnupg unzip \
     && wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \

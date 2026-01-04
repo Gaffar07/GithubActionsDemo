@@ -23,6 +23,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
@@ -89,27 +90,34 @@ public class DriverFactory {
 
 			case "Local":
 				if (browserName.equals("chrome")) {
-					// WebDriverManager.chromedriver().setup();
-					String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
-							+ File.separator + "resources" + File.separator + "chromedriver.exe";
+					ChromeOptions options = new ChromeOptions();
+					//options.setBinary("/usr/bin/google-chrome"); // critical in Docker 
+					if(loader.getProperty("docker").equals("true")|| loader.getProperty("jenkins").equals("true")){
+					
+						options.addArguments("--headless=new"); 
+						options.addArguments("--no-sandbox"); 
+						options.addArguments("--disable-dev-shm-usage"); 
+						options.addArguments("--disable-gpu"); 
+						options.addArguments("--remote-allow-origins=*"); 
+						//options.setExperimentalOption("prefs", prefs);
+						
+						
+					}
+					
+					WebDriverManager.chromedriver().setup();
+//					String path = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
+//							+ File.separator + "resources" + File.separator + "chromedriver.exe";
 					if (platformName.contains("mac"))
 						System.setProperty("webdriver.chrome.driver", "/opt/homebrew/bin/chromedriver");
 					else
-						System.setProperty("webdriver.chrome.driver", path);
-					Map<String, Object> prefs = new HashMap<String, Object>();
+//						System.setProperty("webdriver.chrome.driver", path);
+//					Map<String, Object> prefs = new HashMap<String, Object>();
 
 					// Use File.separator as it will work on any OS
-					prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "target");
+					//prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "target");
 
 					// Adding cpabilities to ChromeOptions
-					ChromeOptions options = new ChromeOptions();
-					options.setBinary("/usr/bin/google-chrome"); // critical in Docker 
-					options.addArguments("--headless=new"); 
-					options.addArguments("--no-sandbox"); 
-					options.addArguments("--disable-dev-shm-usage"); 
-					options.addArguments("--disable-gpu"); 
-					options.addArguments("--remote-allow-origins=*"); 
-					options.setExperimentalOption("prefs", prefs);
+					
 
 					
 					
