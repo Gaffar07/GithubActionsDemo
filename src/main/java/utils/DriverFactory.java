@@ -103,7 +103,11 @@ public class DriverFactory {
 
 					// Adding cpabilities to ChromeOptions
 					ChromeOptions options = new ChromeOptions();
-					options.addArguments("--headless=new"); 
+					options.addArguments("--headless=new"); // modern headless mode 
+					options.addArguments("--no-sandbox"); 
+					options.addArguments("--disable-dev-shm-usage"); // important for Docker 
+					options.addArguments("--disable-gpu"); 
+					options.addArguments("--remote-allow-origins=*");
 					options.setExperimentalOption("prefs", prefs);
 					
 					// options.setHeadless(true);
