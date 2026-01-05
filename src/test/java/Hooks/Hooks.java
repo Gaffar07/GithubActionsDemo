@@ -62,7 +62,8 @@ public class Hooks {
 
 	@Before("not @TableTents")
 	public void setup(Scenario scenario) throws Exception {
-		LOG.info(String.valueOf(Thread.currentThread().getId()));
+		LOG.info("Thread is :"+String.valueOf(Thread.currentThread().getId()));
+		System.out.println("Thread is :"+String.valueOf(Thread.currentThread().getId()));
 		testTitle = scenario.getName();
 		LOG.info("Starting scenario: " + scenario.getName());
 		if (appName.equalsIgnoreCase("web") || appName.equalsIgnoreCase("ssma")) {
