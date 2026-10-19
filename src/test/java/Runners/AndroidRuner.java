@@ -27,6 +27,7 @@ public class AndroidRuner extends AbstractTestNGCucumberTests {
 		String appName=System.getProperty("app");
 		String Enviroment=System.getProperty("testenv");
 		if (appName==null){
+			System.out.println("new added")
 			appName= ConfigLoader.getInstance().getTestTEST_APP_NAME();
 			Enviroment=ConfigLoader.getInstance().getTestConfigFileName();
 		}
